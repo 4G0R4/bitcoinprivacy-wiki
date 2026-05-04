@@ -5,7 +5,7 @@ hide:
   - toc
 ---
 
-# Bitcoin Privacy, Explained Simply
+# Home
 
 Bitcoin lets ordinary people hold money directly. That is powerful, but it comes with a trade-off: **Bitcoin is public by default**.
 

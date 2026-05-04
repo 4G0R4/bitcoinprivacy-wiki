@@ -1,131 +1,175 @@
 ---
-description: Learn why Bitcoin privacy matters, how identities get linked to addresses, and the difference between privacy and anonymity
+description: Learn what Bitcoin privacy means, why Bitcoin is pseudonymous rather than anonymous, and how links between identity, addresses, UTXOs, and activity are created.
 ---
 
-# What is Bitcoin Privacy?
+# What Is Bitcoin Privacy?
 
-Welcome to your journey into Bitcoin privacy. This page will explain what Bitcoin is, why privacy matters, and why Bitcoin is not as private as most people think.
+The previous page explained why privacy matters. This page explains **what Bitcoin privacy actually means**.
 
----
+Bitcoin privacy is not one single setting you turn on. It is the practice of controlling which pieces of information are linked together.
 
-## What Is Bitcoin?
+In Bitcoin, the most important question is usually:
 
-Bitcoin is a digital currency that operates without any central authority like a bank or government. It was created in 2009 by someone using the name [Satoshi Nakamoto](../glossary.md#satoshi-nakamoto). Bitcoin lets you send value directly to anyone in the world without needing a middleman.
-
-Think of Bitcoin like digital cash. When you hand someone a banknote, you do not need a bank to approve it. The transaction just happens. Bitcoin works the same way, but digitally.
-
-### The Public Ledger
-
-Every Bitcoin transaction that has ever happened is recorded on a public ledger that anyone can view. This ledger is permanent - once a transaction is recorded, it cannot be changed, removed, or hidden. It will be replicated on every Bitcoin [node](../glossary.md#node) around the world for as long as Bitcoin exists.
-
-!!! warning "The Internet Forgets, Bitcoin Does Not"
-
-    On the internet, if you post something embarrassing, you can sometimes delete it. Articles can be updated. Tweets can be removed. The internet slowly forgets over time.
-
-    On Bitcoin, once a transaction is confirmed, it is there **forever**. This is why getting privacy right from the start is so important. **Mistakes on Bitcoin are permanent.**
+> Who can connect this transaction, address, or coin to a real person or identity?
 
 ---
 
-## Bitcoin Is Not Anonymous
+## Bitcoin Is Pseudonymous, Not Anonymous
 
-Bitcoin is often described as "anonymous" or "private." Neither of these descriptions is entirely accurate. Bitcoin is **pseudo-anonymous**, which means that while your real-world identity is not directly attached to your transactions, it is possible to link your identity to your Bitcoin activity through various methods.
+Bitcoin does not put your legal name inside a transaction. A Bitcoin [address](../glossary.md#address) looks like a random string:
 
-Your Bitcoin [addresses](../glossary.md#address) look like random strings of characters, such as:
-
-```
+```text
 bc1qelem0ann687r2e9jax542lja7q8cu8s35h96pc
 ```
 
-There is nothing in this address that says "this belongs to John Smith." However, there are many ways your identity can become linked to it.
+There is no name, phone number, passport number, or home address written inside that address.
+
+But that does **not** mean Bitcoin is anonymous.
+
+!!! warning "Pseudonymous Means 'Name Hidden, Activity Visible'"
+
+    Bitcoin is better described as **pseudonymous**.
+
+    Your real name is not automatically shown, but your activity can still be watched and linked together. If one address becomes connected to you, other addresses and transactions may become connected to you too.
+
+A simple way to think about it:
+
+- **Anonymous:** nobody can tell who you are
+- **Pseudonymous:** you use identifiers that are not your real name, but those identifiers can still build a history
+
+Bitcoin addresses are like public usernames for money. If a username is ever linked to you, the history attached to that username becomes easier to understand.
 
 ---
 
-## How Identities Get Linked to Addresses
+## Privacy Means Breaking Unwanted Links
+
+Bitcoin privacy is mostly about preventing unwanted links.
+
+A **link** is a connection between two pieces of information.
+
+Examples:
+
+- Your name is linked to a Bitcoin address
+- Two addresses are linked to the same wallet
+- A payment is linked to your employer
+- A donation address is linked to your public identity
+- Several coins are linked together in one transaction
+- Your wallet activity is linked to your IP address
+
+The fewer unwanted links you create, the harder it is for someone to build a clear picture of your financial life.
+
+!!! tip "The Goal Is Selective Disclosure"
+
+    Good privacy does not mean hiding everything from everyone.
+
+    It means revealing only what is necessary. If you pay someone, they need to know they were paid. They do not need to learn your savings balance, your other payments, or your full wallet history.
+
+---
+
+## The Four Main Things That Get Linked
+
+Most Bitcoin privacy problems come from links between four things:
 
 <div class="grid cards" markdown>
 
--   :material-bank:{ .lg .middle } __KYC Exchanges__
+-   :material-account:{ .lg .middle } __Identity__
 
     ---
 
-    When you create an account on a regulated exchange, you provide your name, address, photo ID, and sometimes even a selfie. The exchange knows exactly who you are. When you withdraw bitcoin, they know which address you withdrew to. They have now linked your real identity to that Bitcoin address.
+    Your real name, public username, business, phone number, email address, social profile, or anything else that points to you.
 
--   :material-ip-network:{ .lg .middle } __IP Addresses__
-
-    ---
-
-    When your [wallet](../glossary.md#wallet) "connects to the Bitcoin network" through someone else's server, that server can see your IP address and which addresses you are querying. Your IP address can often be linked to your physical location and your internet service provider account.
-
--   :material-web:{ .lg .middle } __Public Activity__
+-   :material-wallet:{ .lg .middle } __Wallet Activity__
 
     ---
 
-    If you post your Bitcoin address on a public website, link it to your social media, use it for a public donation page, or give it to a business that knows your identity, you have created a link.
+    The addresses, balances, transactions, and coins that your wallet controls.
 
--   :material-repeat-variant:{ .lg .middle } __Address Reuse__
+-   :material-server-network:{ .lg .middle } __Network Activity__
 
     ---
 
-    If you use the same Bitcoin address multiple times, anyone who learns your identity for that address can see every transaction you have ever received to it. This is why [address reuse](../glossary.md#address-reuse) is considered the number one privacy mistake.
+    Your IP address, wallet server connections, block explorer searches, and transaction broadcasts.
+
+-   :material-clock-outline:{ .lg .middle } __Context__
+
+    ---
+
+    Timing, amounts, invoices, labels, public posts, messages, or real-world events that help explain a transaction.
 
 </div>
 
----
-
-## Why Privacy Matters
-
-Privacy is recognized as a fundamental human right by the United Nations and many international bodies. Your financial information is deeply personal. Most people would not want strangers knowing:
-
-- How much money they earn
-- What they spend their money on
-- Who they pay and who pays them
-- How much they have saved
-- Their spending patterns and habits
-
-### The $5 Wrench Attack
-
-!!! quote "Physical Safety"
-
-    There is a famous joke in Bitcoin: "Bitcoin can be stolen with a $5 wrench." This refers to the fact that if someone knows you own a lot of bitcoin, they might try to physically force you to hand it over.
-
-    **Keeping your bitcoin holdings private is not just about digital privacy - it is about physical safety.**
-
-### Future Employer Could See Your Income
-
-If your employer knows your Bitcoin address, they could see exactly how much you earn and how you spend it. This could affect your negotiating position, your job security, or your personal relationships.
-
-### Chain Analysis Companies
-
-Companies like **Chainalysis**, **Elliptic**, and **CipherTrace** (owned by Mastercard) exist specifically to link Bitcoin addresses to real identities. They use sophisticated software to analyze the blockchain and apply various assumptions to cluster addresses together. Their clients include law enforcement agencies, governments, and financial institutions.
+Bitcoin privacy means keeping these categories separated when they do not need to be connected.
 
 ---
 
-## Privacy vs Anonymity
+## A Simple Example
 
-It is important to understand the difference:
+Imagine you receive bitcoin to a fresh address from a friend.
 
-| | Anonymity | Privacy |
-|---|---|---|
-| **Definition** | Nobody can tell who you are at all | You can choose who sees what information |
-| **Bitcoin** | Bitcoin does not provide this | Bitcoin provides the tools for this |
-| **Example** | Cash transactions in person | Using [CoinJoin](../glossary.md#coinjoin) to break transaction links |
+That address is not automatically tied to your real name. But links can appear later:
 
-Bitcoin does not give you anonymity. However there are **tools for privacy** - offering you the ability to selectively reveal information about yourself while keeping other information hidden.
+1. You reuse the same address for another payment
+2. You post that address on social media
+3. You spend coins from that address together with coins from another source
+4. You look up the address on a public block explorer from your normal browser
+5. You send from that wallet to a service that knows your identity
+
+Each step adds more clues. One clue may not reveal much. Many clues together can reveal a lot.
+
+??? info "Why Small Clues Matter"
+
+    Bitcoin privacy often fails through combination.
+
+    A single address, a single IP address, or a single payment amount may not prove much by itself. But when several clues point in the same direction, the picture becomes clearer.
 
 ---
 
-## Bitcoin Privacy Is Not Hopeless
+## Bitcoin Privacy Is About Context
 
-While Bitcoin is not private by default, it is not hard to make it private. The tools and techniques exist. The knowledge exists. What is required is a willingness to learn and apply these techniques correctly.
+A Bitcoin transaction is just data. It shows inputs, outputs, amounts, and timing.
 
-This site will guide you through everything you need to know, from the absolute basics to advanced techniques. You do not need to implement every privacy measure from day one. Start with the fundamentals, and build your knowledge over time.
+Privacy leaks happen when that data gains context.
+
+For example:
+
+| Context added | What it can reveal |
+|---|---|
+| A reused address | Payments belong to the same receiver |
+| A public donation page | Payments are connected to a public project |
+| An exchange withdrawal | Coins started from an identity-linked account |
+| A wallet server query | Which addresses a wallet is interested in |
+| A payment amount | Which output is likely the real payment |
+| A social media post | A real person may be connected to an address |
+
+This is why Bitcoin privacy is not only about the blockchain. It is also about how you receive, spend, connect, post, label, and talk about bitcoin.
+
+---
+
+## Privacy Is a Skill
+
+Bitcoin privacy is not hopeless, but it is not automatic either.
+
+You do not need to learn everything at once. Start with the basic idea:
+
+> Do not create unnecessary links.
+
+Then learn the practical habits one by one:
+
+1. Use fresh addresses
+2. Keep different sources of bitcoin separate
+3. Understand [UTXOs](../glossary.md#utxo)
+4. Use wallets with good privacy features
+5. Run your own [node](../glossary.md#node) when ready
+6. Learn privacy tools before using them with large amounts
+
+Each habit reduces the amount of information you leak.
 
 ---
 
 ## What Comes Next
 
-Now that you understand why privacy matters, the next step is to think about what you are personally trying to protect. Bitcoin privacy is not one-size-fits-all: a public donation page, a long-term savings wallet, and everyday spending all need different habits.
+Now that you understand what Bitcoin privacy means, the next step is to think about your own situation.
 
-Start by undertanding how to build a simple threat model tailored to your needs.
+A public donation page, a long-term savings wallet, and everyday spending all have different privacy needs. A simple [threat model](threat-modeling.md) helps you decide what matters most.
 
 [Threat Modeling →](threat-modeling.md)
