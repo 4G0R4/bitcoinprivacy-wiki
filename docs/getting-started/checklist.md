@@ -66,11 +66,17 @@ Once you have the basics, add these layers.
 
     Connect your wallet to your own node so queries do not leak to third-party servers.
 
--   :material-shield-lock:{ .lg .middle } __Use a Hardware Wallet__
+-   :material-shield-lock:{ .lg .middle } __Use a Hardware Wallet Carefully__
 
     ---
 
-    Store your seed phrase on a dedicated hardware device that never touches the internet directly.
+    Hardware wallets protect keys, but buying one can create a privacy leak. Avoid linking your name, home address, and hardware wallet purchase in the same database when possible.
+
+-   :material-tools:{ .lg .middle } __Consider SeedSigner__
+
+    ---
+
+    [SeedSigner](https://seedsigner.com/) can be built from generic off-the-shelf parts, reducing purchase privacy leaks and supply chain risk.
 
 -   :material-shuffle:{ .lg .middle } __Use CoinJoin__
 

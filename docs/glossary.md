@@ -692,9 +692,12 @@ description: Comprehensive terminology reference for Bitcoin privacy concepts.
 
     A list of 12 or 24 words that can regenerate all the private keys in your wallet. This is the most important thing to back up. Write it on paper and store it somewhere safe. Never store it digitally.
 
+<a id="seedsigner"></a>
 !!! info "SeedSigner"
 
-    A DIY air-gapped hardware wallet that can be built using off the shelf parts. Minimizes supply chain attack risk. Stateless by default and excellent for privacy.
+    A DIY air-gapped signing device that can be built from generic off-the-shelf parts. Because the parts are not obviously Bitcoin-specific, [SeedSigner](https://seedsigner.com/) can reduce purchase privacy leaks compared with ordering a dedicated hardware wallet to your home.
+
+    SeedSigner is stateless by default, keeps signing offline, and helps reduce supply chain risk because you assemble the device yourself instead of trusting a pre-built device from a specialist vendor.
 
 <a id="self-send-self-transfer"></a>
 !!! danger "Self-send (Self-transfer)"

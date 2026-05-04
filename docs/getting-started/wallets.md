@@ -85,6 +85,40 @@ There is only one wallet that is reccomended today and that is [Sparrow Wallet](
 
 ---
 
+## Hardware Wallet Purchase Privacy
+
+Hardware wallets are useful security tools, but buying one can create a privacy leak if you order it like any normal online purchase.
+
+If you buy a hardware wallet with a debit card and ship it to your home, the seller or payment processor may store:
+
+- Your name
+- Your home address
+- Your email address
+- Your phone number
+- Your payment details
+- The fact that you bought a Bitcoin storage device
+
+That kind of list is sensitive. If it leaks, it can connect your identity and home address to Bitcoin ownership.
+
+!!! tip "Buy Hardware Wallets More Privately"
+
+    If you want to buy a hardware wallet, consider paying with bitcoin privately instead of using a card, and consider delivery to a PO box or other non-home delivery address when possible.
+
+    The goal is simple: avoid putting your name, home address, and hardware wallet purchase into the same database.
+
+### SeedSigner: Build Instead of Buy
+
+[SeedSigner](https://seedsigner.com/) is different from most hardware wallets. It is a DIY, air-gapped signing device that you can build from generic off-the-shelf parts.
+
+This has two privacy benefits:
+
+1. The parts do not obviously identify you as a Bitcoin holder
+2. You reduce supply chain risk because you are not relying on a pre-built Bitcoin device arriving from a specialist vendor
+
+SeedSigner is not the easiest option for everyone, but it is worth knowing about if you care about purchase privacy and supply chain privacy.
+
+---
+
 ## Choosing the Right Wallet
 
 | Your Situation | Recommended Wallet |
