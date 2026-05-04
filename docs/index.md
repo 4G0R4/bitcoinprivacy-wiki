@@ -5,79 +5,83 @@ hide:
   - toc
 ---
 
-# Home
+# Bitcoin Privacy, Explained Simply
 
-BitcoinPrivacy.Wiki is a collection of in-depth learning resources about Bitcoin privacy. This site covers everything from fundamental concepts to advanced privacy techniques, providing detailed documentation for anyone looking to understand and improve their financial privacy on Bitcoin.
+Bitcoin lets ordinary people hold money directly. That is powerful, but it comes with a trade-off: **Bitcoin is public by default**.
+
+Anyone with an internet connection can inspect Bitcoin transactions, amounts, addresses, and coin history. This website explains what that means, why it matters, and how normal people can reduce unnecessary exposure.
 
 ---
 
-## Browse by Topic
+## Choose Your Next Step
 
 <div class="grid cards" markdown>
 
--   :material-book-open-variant:{ .lg .middle } __Getting Started__
+-   :material-book-open-page-variant:{ .lg .middle } __Basics__
 
     ---
 
-    Foundational concepts: what Bitcoin is, why privacy matters, how UTXOs work, chain analysis, privacy heuristics, acquiring bitcoin privately, wallets, and running nodes.
+    Understand why Bitcoin privacy matters for normal people and get a basic understanding of all concepts.
 
-    [Getting Started →](getting-started/what-is-privacy.md)
+    [Getting Started →](getting-started/why-care-about-bitcoin-privacy.md)
 
--   :material-shield-check:{ .lg .middle } __Privacy Techniques__
-
-    ---
-
-    Practical methods for improving privacy: address hygiene, coin control, CoinJoin implementations (Whirlpool, JoinMarket, Wasabi), PayJoin, Stonewall, Stowaway, Ricochet, post-mix best practices, and reusable payment codes.
-
-    [Privacy Techniques →](techniques/address-reuse/index.md)
-
--   :material-lightning-bolt:{ .lg .middle } __Lightning Privacy__
+-   :material-fingerprint-off:{ .lg .middle } __Privacy Techniques__
 
     ---
 
-    Privacy considerations for the Lightning Network: how it works, its privacy benefits and limitations, wallet options, and channel management.
+    Learn about techniques such as coin control, CoinJoin, PayJoin, and Stonewall that people use to enhance their on chain privacy.
 
-    [Lightning Basics →](lightning/basics.md)
+    [Privacy Techniques →](techniques/decision-tree.md)
 
--   :material-calculator:{ .lg .middle } __Boltzmann Entropy__
+-   :material-lightning-bolt-circle:{ .lg .middle } __Lightning Privacy__
 
     ---
 
-    The mathematical foundation of Bitcoin transaction privacy: what entropy means, how to count valid interpretations, the link probability matrix, and the partition formula for CoinJoins.
+    People often say lightning solves Bitcoin Privacy, read why this is not the case.
+
+    [Lightning Privacy →](lightning/privacy.md)
+
+-   :material-scale-balance:{ .lg .middle } __Fungibility__
+
+    ---
+
+    Learn why privacy protects Bitcoin's cash-like properties.
+
+    [Bitcoin Fungibility →](links/fungibility.md)
+
+-   :material-calculator-variant:{ .lg .middle } __Advanced Analysis__
+
+    ---
+
+    Understand Boltzmann entropy, valid interpretations, and link probability matrices — the math behind transaction privacy.
 
     [Boltzmann Entropy →](boltzmann/index.md)
 
--   :material-tools:{ .lg .middle } __Tools & Resources__
+-   :material-magnify-scan:{ .lg .middle } __Real Examples__
 
     ---
 
-    Privacy scanners, block explorers, fee estimation tools, and curated links for further learning.
+    See how real transactions can be analyzed by anyone with a internet connection and what data they can infer from the public blockchain.
 
-    [Tools →](links/index.md)
-
--   :material-format-list-bulleted:{ .lg .middle } __Glossary__
-
-    ---
-
-    Comprehensive terminology reference for Bitcoin privacy concepts.
-
-    [Glossary →](glossary.md)
+    [Analysis Walkthroughs →](analysis/index.md)
 
 </div>
 
 ---
 
-## References
+## What This Site Is For
 
-This site draws knowledge from the following sources:
+This site is information for ordinary people who want to understand Bitcoin privacy clearly.
 
-- **[Mastering Bitcoin](https://github.com/bitcoinbook/bitcoinbook)** by Andreas Antonopoulos - Bitcoin fundamentals, UTXOs, keys, addresses, wallets, nodes
-- **[A Beginners Guide To Bitcoin Privacy](https://www.athena-alpha.com/bitcoin-privacy/)** by Athena Alpha - Privacy fundamentals, pseudo-anonymity, KYC risks
-- **[bitcoiner.guide](https://bitcoiner.guide/)** - Wallet guides, node guides, privacy guides, no-KYC guidance, Lightning guide
-- **[am-i-exposed](https://am-i.exposed/)** - Privacy heuristics, chain analysis, entropy, transaction analysis, privacy scoring. The [privacy engine documentation](https://github.com/Copexit/am-i-exposed/blob/main/docs/privacy-engine.md) is a primary reference for the advanced topics covered in this site.
-- **[silentpaymentsxyz](https://silentpayments.xyz/)** - Silent Payments explanation, BIP47 comparison, wallet support
-- **[paymentcode.io](https://paymentcode.io/)** - BIP47 protocol, Paynym API, Auth47
-- **[Planb Academy](https://planb.academy/)** - Bitcoin courses, node setup, security, wallet guidance
+It explains:
+
+- Why financial privacy matters for safety
+- What the public Bitcoin ledger reveals
+- How identities get linked to addresses
+- Why exchange data leaks are dangerous
+- What privacy tools are available
+- What each tool can and cannot do
+- How someone can analyze their own privacy
 
 ---
 

@@ -32,7 +32,7 @@ Each example shows:
 
     [View Example →](batch-payment.md)
 
--   :material-combine:{ .lg .middle } __UTXO Consolidation__
+-   :material-call-merge:{ .lg .middle } __UTXO Consolidation__
 
     ---
 
