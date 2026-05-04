@@ -107,6 +107,7 @@ nav:
   - Home:
     - index.md
   - Getting Started:
+    - Why Care About Bitcoin Privacy?: getting-started/why-care-about-bitcoin-privacy.md
     - What is Bitcoin Privacy?: getting-started/what-is-privacy.md
     - Threat Modeling: getting-started/threat-modeling.md
     - Understanding UTXOs: getting-started/utxos.md
