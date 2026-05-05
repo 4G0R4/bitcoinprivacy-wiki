@@ -62,7 +62,7 @@ In a PayJoin transaction:
 
 ## Why PayJoin Is Powerful
 
-### Poisoning the Heuristic
+### Poisoning the Common Input Ownership Heuristic
 
 The [Common Input Ownership Heuristic](../glossary.md#common-input-ownership-heuristic) assumes all inputs belong to the same entity. PayJoin deliberately violates this assumption.
 
@@ -109,7 +109,7 @@ Unlike [CoinJoin](../glossary.md#coinjoin), PayJoin is a two-party protocol.
 |---------|---------|----------|
 | **Parties** | 2 (sender + recipient) | 5+ participants |
 | **Coordinator** | None needed | Usually required |
-| **Privacy Gain** | Poisons heuristics | Breaks transaction graph |
+| **Privacy Gain** | Poisons the CIOH | Breaks transaction graph |
 | **Speed** | Fast (one transaction) | Slower (queue for round) |
 | **Fees** | Normal transaction fees | Additional coordination fees |
 | **Best For** | Regular spending | Mixing large amounts |
@@ -122,7 +122,7 @@ Stowaway is Ashigaru's PayJoin implementation. It allows users to create PayJoin
 
 !!! tip "The Key Benefit"
 
-    Stowaway used after a whirlpool coinjoin combines the privacy benefits of CoinJoin (Whirlpool) with the heuristic-poisoning benefits of PayJoin. This combination is one of the most powerful privacy techniques available.
+    Stowaway used after a whirlpool coinjoin combines the privacy benefits of CoinJoin (Whirlpool) with the common input ownership heuristic-poisoning benefits of PayJoin. This combination is one of the most powerful privacy techniques available.
 
 
 ### How Stowaway Works in Ashigaru
