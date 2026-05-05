@@ -74,6 +74,44 @@ Going back to the purse example: imagine someone is watching every transaction y
 
 ---
 
+## When Someone Else Gets Your UTXO
+
+A UTXO is not just a number in your wallet. It is a specific coin with a visible history.
+
+When you spend bitcoin, one or more of your UTXOs become someone else's UTXOs. That is normal. Ownership has changed. The problem is that the public history of that coin does not reset when ownership changes.
+
+If the UTXO you spent is clearly linked to your identity, your old wallet, or your past activity, that history can still point back toward you after you no longer control it.
+
+Imagine this simple chain:
+
+1. You buy bitcoin from an exchange that knows your identity
+2. You send that bitcoin to someone else
+3. That person later spends it somewhere else
+4. An observer follows the coin history backward and sees your exchange-linked withdrawal
+
+You did not control the coin after step 2. You did not choose what happened after step 2. But the chain can still make it look like the coin's later activity has something to do with you.
+
+!!! danger "Your Old Coin Can Create New Problems"
+
+    If your payment history points clearly back to your identity, someone else's later activity can drag your name into a situation you had nothing to do with.
+
+    This is not because you still own the coin. You do not. It is because Bitcoin history is public, and a clear trail can be misunderstood by people, companies, or investigators who do not know the full story.
+
+This is a serious reason to care about UTXO privacy. Good privacy creates separation between your past ownership and someone else's future actions.
+
+!!! info "Urban Hacker Explaining Bitcoin Privacy and UTXOs | MUST LISTEN"
+
+    In this clip from the [Ungovernable Misfits podcast](https://www.ungovernablemisfits.com/shows/), [Urban Hacker](https://x.com/realUrbanHacker) explains Bitcoin's UTXO model and the implications it has on Bitcoin Privacy.
+
+    <audio controls preload="metadata" style="width: 100%;">
+      <source src="https://m.primal.net/IbZb.mov" type="audio/mp4">
+      Your browser does not support the audio element. You can listen directly at <a href="https://m.primal.net/IbZb.mov">this link</a>.
+    </audio>
+
+This is one reason [CoinJoin](../glossary.md#coinjoin), [PayJoin](../glossary.md#payjoin-p2ep), and careful UTXO management matter.
+
+---
+
 ## Coin Control: Taking Control of Your UTXOs
 
 **[Coin control](../glossary.md#coin-control)** is the ability to choose which UTXOs to spend in a transaction. Without coin control, your wallet automatically picks UTXOs for you, and it usually picks them in a way that is convenient but not private.

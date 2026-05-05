@@ -262,6 +262,12 @@ The payment was small. The information leak was not.
 
     Good privacy habits help make sure a simple payment stays a simple payment.
 
+There is another risk too: after you spend bitcoin, the person who receives it now controls that coin. If the coin still looks strongly connected to your identity or past wallet history, future activity by someone else can be misunderstood as connected to you.
+
+For example, you might sell bitcoin to someone or use bitcoin to buy something normal. Later, that same coin moves again. You do not control it anymore, but if the history still points clearly back to you, someone looking at the chain may ask why "your" coin ended up there.
+
+The [Understanding UTXOs](utxos.md#when-someone-else-gets-your-utxo) page explains this risk in more detail and includes an audio clip from Urban Hacker discussing why this matters.
+
 ---
 
 ## Privacy Also Protects Your Economic Life
