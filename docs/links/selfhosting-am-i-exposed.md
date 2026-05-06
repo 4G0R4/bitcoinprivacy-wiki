@@ -223,6 +223,8 @@ services:
 
     You must change `APP_MEMPOOL_IP` and `APP_MEMPOOL_PORT` to match your own mempool backend.
 
+    You must set `APP_MEMPOOL_HIDDEN_SERVICE` to your mempool instance's Tor address. This is the address the app will use to talk to mempool when viewed in Tor Browser.
+
     You must also change `TOR_PROXY_IP` and `TOR_PROXY_PORT` to match your already running Tor SOCKS proxy. `TOR_PROXY_IP` should be the address of that existing Tor proxy as reachable from the container.
 
 ??? info "Environment Variables Explained"
@@ -240,7 +242,7 @@ services:
     :   The port used by the Tor proxy sidecar. Keep this as `3001` unless you intentionally change the sidecar configuration.
 
     `APP_MEMPOOL_HIDDEN_SERVICE`
-    :   Can stay blank unless you specifically want to expose or use a hidden service hostname.
+    :   Your mempool instance's Tor address. The app uses this address to talk to mempool when you view am-i.exposed in Tor Browser.
 
     `PORT`
     :   The port the Tor proxy sidecar listens on inside Docker.
@@ -346,7 +348,11 @@ services:
 
     Again, `192.168.1.50`, `4080`, `192.168.1.60`, and `9050` are example values.
 
-    Replace `APP_MEMPOOL_IP` and `APP_MEMPOOL_PORT` with the real IP address and port for your mempool backend. Replace `TOR_PROXY_IP` and `TOR_PROXY_PORT` with the real address and port for your already running Tor SOCKS proxy.
+    Replace `APP_MEMPOOL_IP` and `APP_MEMPOOL_PORT` with the real IP address and port for your mempool backend.
+
+    Set `APP_MEMPOOL_HIDDEN_SERVICE` to your mempool instance's Tor address. This is the address the app will use to talk to mempool when viewed in Tor Browser.
+
+    Replace `TOR_PROXY_IP` and `TOR_PROXY_PORT` with the real address and port for your already running Tor SOCKS proxy.
 
 ### Build and Start
 
