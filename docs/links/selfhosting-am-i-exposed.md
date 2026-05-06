@@ -15,11 +15,13 @@ Self-hosting reduces that leak. The goal is simple:
 3. Run am-i.exposed against your own mempool backend.
 4. Keep your lookups on your own network where possible.
 
-!!! warning "Prerequisite: You Need mempool.space"
+!!! warning "Prerequisites: You Need mempool.space and Tor"
 
     For all approaches on all platforms, having a working mempool.space instance is a prerequisite.
 
     In plain English: am-i.exposed needs a source of blockchain data. Your self-hosted mempool instance provides that data, so you do not need to query the public mempool.space servers for your own privacy checks.
+
+    For manual Docker installs, you also need access to an already running Tor SOCKS proxy. The `TOR_PROXY_IP` environment variable must point to the address of that existing Tor proxy, not to the am-i.exposed container itself.
 
 ---
 
@@ -149,10 +151,11 @@ Self-hosting software manually sounds more intimidating than it really is. The a
 5. Start the containers.
 6. Check the logs if something breaks.
 
-This section assumes two things are already true:
+This section assumes three things are already true:
 
 - You already run a Bitcoin node somewhere.
 - You already run a working mempool.space stack somewhere.
+- You already run a Tor SOCKS proxy somewhere that the am-i.exposed Tor proxy container can reach.
 
 You have two manual choices:
 
@@ -210,15 +213,17 @@ services:
     restart: unless-stopped
     environment:
       PORT: "3001"
-      TOR_PROXY_IP: 127.0.0.1
+      TOR_PROXY_IP: 192.168.1.60
       TOR_PROXY_PORT: "9050"
 ```
 
-!!! warning "Change the Mempool IP and Port"
+!!! warning "Change the Mempool and Tor Proxy Addresses"
 
-    The example uses `192.168.1.50` and port `4080`. These are example values.
+    The example uses `192.168.1.50` for mempool and `192.168.1.60` for Tor. These are example values.
 
-    You must change them to match your own mempool backend.
+    You must change `APP_MEMPOOL_IP` and `APP_MEMPOOL_PORT` to match your own mempool backend.
+
+    You must also change `TOR_PROXY_IP` and `TOR_PROXY_PORT` to match your already running Tor SOCKS proxy. `TOR_PROXY_IP` should be the address of that existing Tor proxy as reachable from the container.
 
 ??? info "Environment Variables Explained"
 
@@ -241,7 +246,7 @@ services:
     :   The port the Tor proxy sidecar listens on inside Docker.
 
     `TOR_PROXY_IP` and `TOR_PROXY_PORT`
-    :   Tell the sidecar where the Tor SOCKS proxy is inside its own container.
+    :   Tell the sidecar where to reach your already running Tor SOCKS proxy. `TOR_PROXY_IP` must be the address of that existing Tor proxy as seen from the container.
 
 ??? info "What does `3080:8080` mean?"
 
@@ -333,13 +338,15 @@ services:
     restart: unless-stopped
     environment:
       PORT: "3001"
-      TOR_PROXY_IP: 127.0.0.1
+      TOR_PROXY_IP: 192.168.1.60
       TOR_PROXY_PORT: "9050"
 ```
 
-!!! warning "Change the Mempool IP and Port"
+!!! warning "Change the Mempool and Tor Proxy Addresses"
 
-    Again, `192.168.1.50` and `4080` are example values. Replace them with the real IP address and port for your mempool backend.
+    Again, `192.168.1.50`, `4080`, `192.168.1.60`, and `9050` are example values.
+
+    Replace `APP_MEMPOOL_IP` and `APP_MEMPOOL_PORT` with the real IP address and port for your mempool backend. Replace `TOR_PROXY_IP` and `TOR_PROXY_PORT` with the real address and port for your already running Tor SOCKS proxy.
 
 ### Build and Start
 
@@ -358,7 +365,7 @@ This tells Compose to:
 
 ### Why This Works
 
-The build flow is straightforward. Compose builds the main image from the repo, builds the Tor sidecar, and starts both containers together.
+The build flow is straightforward. Compose builds the main image from the repo, builds the Tor proxy helper, and starts both containers together. The helper still needs to know where your actual Tor SOCKS proxy is running, which is why `TOR_PROXY_IP` and `TOR_PROXY_PORT` must point to an existing Tor service.
 
 You are not inventing a strange unsupported setup. You are using the project's own container logic outside Umbrel.
 
@@ -441,7 +448,7 @@ You probably do not need `--no-cache` every time. It is useful when you think ca
 
 ## Final Thoughts
 
-There is nothing exotic about hosting am-i.exposed yourself. It is a web app, a connection to your mempool backend, and a Tor sidecar.
+There is nothing exotic about hosting am-i.exposed yourself. It is a web app, a connection to your mempool backend, a Tor proxy helper, and access to an already running Tor SOCKS proxy.
 
 If you want the fastest path, use Umbrel, StartOS, or the prebuilt Docker images.
 
