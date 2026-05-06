@@ -10,7 +10,9 @@ Bitcoin's goal is to be peer-to-peer electronic cash, but its public ledger crea
 
 !!! info "Presentation: Bitcoin Fungibility — The Absolute State of It"
 
-    A few years ago, Samourai Wallet developer TDevD appeared on the Dirtcoin Diaries podcast and gave a presentation called **Bitcoin Fungibility: The Absolute State of It**.
+    A few years ago, Samourai Wallet developer TDevD appeared on the Dirtcoin Diaries podcast and gave a presentation called **Bitcoin Fungibility: The Absolute State of It**. The presentation stands out because it identified the real pressure points early: regulatory capture, KYC adoption, custodial walled gardens, chain analysis, the neglect of on-chain privacy, and the way privacy tools are treated as suspicious instead of necessary.
+
+    The point was not merely that Bitcoin privacy needed better software. The deeper warning was that Bitcoin's fungibility could die socially and economically if users, wallets, exchanges, miners, and institutions allowed surveillance norms to define which coins are acceptable.
 
     <video controls width="100%" preload="metadata" onloadedmetadata="this.volume = 0.3">
       <source src="https://blob.satellite.earth/649fc84a78317d95d8174a4b5769459773e5daba22bbff39542eba123529d2ad" type="video/mp4">
@@ -53,7 +55,7 @@ Bitcoin transactions are public forever. Every transaction reveals:
 
 This transparency is useful for auditability, but it creates a fungibility challenge. If observers can follow coins through the blockchain, they can build histories around UTXOs and treat them differently based on those histories.
 
-That is why privacy and fungibility are connected. Privacy tools are not only about hiding personal information. They also protect Bitcoin's monetary quality by making it harder to assign reliable histories to individual coins.
+That is why privacy and fungibility are connected. Privacy tools are not only about hiding personal information. They also protect Bitcoin's monetary quality by making it harder to assign arbitrary labels to individual coins.
 
 ---
 
@@ -71,18 +73,6 @@ This is why the site repeatedly recommends separating [KYC](../glossary.md#kyc-k
 
 This turns non-fungibility into a business model: the worse Bitcoin's fungibility becomes, the more valuable surveillance and compliance services become.
 
-### Address Reuse
-
-[Address reuse](../glossary.md#address-reuse) is a direct fungibility failure. If a public address receives repeated payments, every payment to that address becomes linked to the same public context. Anyone can watch the balance, timing, and spending behavior.
-
-Good [address hygiene](../techniques/address-reuse/index.md) protects both personal privacy and fungibility.
-
-### UTXO Consolidation
-
-[UTXO consolidation](../analysis/consolidation.md) links coins together through the [Common Input Ownership Heuristic](../glossary.md#common-input-ownership-heuristic). If one input has a known history, consolidation can drag unrelated coins into the same cluster.
-
-This is one of the easiest ways to make previously separate coins inherit the same reputation.
-
 ### Custodial and "De Facto Layer 2" Systems
 
 Many users interact with bitcoin through custodial platforms: exchanges, payment apps, brokerages, and account-based services. These systems may display a bitcoin balance, but users do not control UTXOs. They control an account entry.
@@ -95,6 +85,20 @@ Inside those systems, the custodian decides:
 - Which users are considered risky
 - Whether coins can move freely at all
 
+This is sometimes presented as adoption because more people get price exposure to bitcoin. From a fungibility perspective, it is more complicated. If most users hold bitcoin through custodial balances, then most users are not exercising direct control over UTXOs. Their ability to transact depends on the platform's policy, not only on Bitcoin's rules.
+
+### Financialization and Price-Only Adoption
+
+Fungibility also suffers when bitcoin is treated mainly as a price exposure product rather than peer-to-peer cash. ETFs, broker apps, custodial trading accounts, and other financial products can increase demand while reducing direct use of Bitcoin as a bearer instrument.
+
+That changes the culture around bitcoin. Users may learn to care about price while ignoring privacy, self-custody, UTXO management, and censorship resistance. If adoption means more people holding account balances inside regulated platforms, then it can increase liquidity while weakening the habits that protect fungibility.
+
+!!! tip "Fungibility Requires Actual Use"
+
+    Bitcoin's cash-like properties are strengthened when people hold keys, receive to fresh addresses, label UTXOs, use coin control, and transact directly.
+
+    Price exposure alone does not teach those habits.
+
 ### Flagging CoinJoins
 
 A [CoinJoin](../glossary.md#coinjoin) is a privacy-positive transaction, but some services treat CoinJoin history as suspicious by default. This harms fungibility because it punishes users for using a tool that protects privacy.
@@ -103,9 +107,25 @@ A healthy Bitcoin ecosystem should not treat privacy as suspicious.
 
 ---
 
+## On-Chain Privacy Is Being Neglected
+
+For years, Bitcoin privacy discussions pointed toward future improvements: confidential transactions (CT), cross-input signature aggregation (CISA), better transaction relay privacy, stronger wallet protocols, and wider CoinJoin adoption. Some of these ideas are technically interesting. Some may still matter in the future. But the social reality is hard to ignore: serious discussion of on-chain privacy has faded.
+
+Today, most public attention goes toward price, ETFs, custodial apps, institutional adoption, and account-based exposure. Much less attention goes toward making ordinary on-chain transactions harder to surveil. That is dangerous because fungibility does not survive automatically. If on-chain privacy stops improving, and if privacy tools remain niche or stigmatized, Bitcoin's cash-like properties die.
+
+!!! danger "Fungibility Can Die Quietly"
+
+    Fungibility does not need to fail through one dramatic protocol change.
+
+    It can die slowly if most users buy through KYC platforms, hold custodial balances, reuse addresses, avoid CoinJoin because it is stigmatized, and accept chain analysis labels as normal.
+
+    In that world, Bitcoin may still have a market price, but its usefulness as peer-to-peer cash is non existent.
+
+---
+
 ## Privacy Tools Are Fungibility Tools
 
-Bitcoin privacy tools help defend fungibility by weakening the reliability of coin histories.
+Bitcoin privacy tools help defend fungibility.
 
 | Tool | Fungibility benefit |
 |---|---|
@@ -135,6 +155,14 @@ The [Boltzmann entropy](../boltzmann/index.md) section explains this mathematica
 
 Higher entropy means more ambiguity. More ambiguity means weaker surveillance. Weaker surveillance means stronger fungibility.
 
+### Stonewall and a Minimum Privacy Floor
+
+Fungibility does not only depend on large CoinJoins. Spending tools can also help by avoiding the most obvious transaction patterns.
+
+[Stonewall](../techniques/stonewall.md) is useful because it creates a transaction structure with a minimum level of ambiguity. A normal payment often has 0 bits of entropy. A Stonewall-style transaction can create plausible deniability by making an ordinary spend look similar to a small collaborative transaction.
+
+That does not make Stonewall a replacement for CoinJoin, but it makes ordinary spending less damaging than a simple transaction that clearly links inputs, payment, and change.
+
 ---
 
 ## Lightning Is Not a Complete Fungibility Fix
@@ -153,6 +181,8 @@ Lightning has its own privacy issues:
 Lightning is useful, especially for small payments, but it should not be treated as a replacement for on-chain privacy discipline.
 
 Read [Lightning Privacy](../lightning/privacy.md) before assuming Lightning payments are private by default.
+
+The same warning applies to other off-chain or sidechain systems. If a system depends on custodians, federation policy, withdrawal controls, or selective acceptance of deposits, it may move activity away from the public chain while still leaving fungibility decisions in someone else's hands.
 
 ---
 
@@ -188,12 +218,14 @@ To protect your own privacy and contribute to Bitcoin fungibility:
 4. Keep KYC and non-KYC funds separate
 5. Use [coin control](../techniques/coin-control.md) before spending
 6. Do not consolidate unrelated UTXOs
-7. Use [PayJoin](../techniques/payjoin.md) when available
-8. Use [Stonewall](../techniques/stonewall.md) when PayJoin is not available
-9. Use [CoinJoin](../techniques/coinjoin/index.md) for forward-looking privacy
-10. Follow [post-mix best practices](../techniques/post-mix.md)
-11. Avoid sending privacy-sensitive coins to services that punish privacy
-12. Use [Tor](../glossary.md#tor) and your own [node](../glossary.md#node) where possible
+7. Prefer direct self-custody over custodial bitcoin IOUs
+8. Use [PayJoin](../techniques/payjoin.md) when available
+9. Use [Stonewall](../techniques/stonewall.md) when PayJoin is not available
+10. Use [CoinJoin](../techniques/coinjoin/index.md) for forward-looking privacy
+11. Follow [post-mix best practices](../techniques/post-mix.md)
+12. Avoid sending privacy-sensitive coins to services that punish privacy
+13. Use [Tor](../glossary.md#tor) and your own [node](../glossary.md#node) where possible
+14. Support wallets, merchants, and services that make privacy tools normal
 
 ---
 
@@ -202,10 +234,13 @@ To protect your own privacy and contribute to Bitcoin fungibility:
 1. Fungibility means each unit of bitcoin is treated as interchangeable with every other unit
 2. Bitcoin's public ledger makes fungibility harder because every UTXO has a visible history
 3. Chain analysis, KYC, blacklisting, address reuse, and consolidation all weaken fungibility
-4. Privacy tools are fungibility tools because they reduce the reliability of coin histories
-5. CoinJoin is especially important because it creates transaction graph ambiguity
-6. Fungibility is defended by both software and social norms
-7. Treating privacy as suspicious harms Bitcoin's usefulness as peer-to-peer cash
+4. Regulatory capture and preemptive compliance can create walled gardens around otherwise valid bitcoin
+5. Custodial account balances and price-only adoption do not protect Bitcoin's cash-like properties
+6. On-chain privacy is being neglected, and that neglect directly weakens Bitcoin's fungibility
+7. Privacy tools are fungibility tools because they reduce the reliability of coin histories
+8. CoinJoin is especially important because it creates transaction graph ambiguity
+9. Fungibility is defended by both software and social norms
+10. Treating privacy as suspicious harms Bitcoin's usefulness as peer-to-peer cash
 
 ---
 
