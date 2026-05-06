@@ -90,6 +90,7 @@ However, when we incorporate blockchain context (the same address appears in bot
 ![Link probability matrix showing 2 deterministic links](../images/two-in-two-out-analysis.png){ loading=lazy }
 
 The LPM shows:
+
 - **Input 1 → Output 1: 100%** (deterministic link)
 - **Input 2 → Output 2: 100%** (deterministic link)
 - **Input 1 → Output 2: 50%**
