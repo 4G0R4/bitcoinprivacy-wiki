@@ -136,7 +136,7 @@ Bitcoin privacy tools help defend fungibility.
 | [PayJoin](../techniques/payjoin.md) | Poisons the Common Input Ownership Heuristic |
 | [Stonewall](../techniques/stonewall.md) | Creates plausible deniability in ordinary spends |
 | [CoinJoin](../techniques/coinjoin/index.md) | Breaks historical transaction links and creates forward-looking privacy |
-| [riccochet](../techniques/riccochet.md) | Adds transactional distance before a final destination |
+| [Riccochet](../techniques/riccochet.md) | Adds transactional distance before a final destination |
 | [Lightning](../lightning/basics.md) | Moves small payments off-chain, with its own privacy trade-offs |
 
 !!! tip "Fungibility Is Built Through Habits"

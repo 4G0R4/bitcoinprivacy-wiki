@@ -56,7 +56,7 @@ Each example shows:
 
     [View Example →](stonewall.md)
 
--   :material-swap-horizontal:{ .lg .middle } __riccochet__
+-   :material-swap-horizontal:{ .lg .middle } __Riccochet__
 
     ---
 

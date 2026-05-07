@@ -70,11 +70,11 @@ A post-mix UTXO is an output from a CoinJoin transaction. It has been mixed with
 
     Do not spend all your post-mix UTXOs in quick succession. Wait between spends.
 
--   :material-shield-check:{ .lg .middle } __Use riccochet for Extra Distance__
+-   :material-shield-check:{ .lg .middle } __Use Riccochet for Extra Distance__
 
     ---
 
-    riccochet adds 4 hops between your post-mix and the final destination.
+    Riccochet adds 4 hops between your post-mix and the final destination.
 
 </div>
 
@@ -89,7 +89,7 @@ A post-mix UTXO is an output from a CoinJoin transaction. It has been mixed with
     **Features:**
     - Separate post-mix wallet
     - Stowaway (PayJoin) support
-    - riccochet support
+    - Riccochet support
     - UTXO freeze for dust
 
 === "Sparrow Wallet"

@@ -48,7 +48,7 @@ description: Comprehensive terminology reference for Bitcoin privacy concepts.
 <a id="ashigaru-wallet"></a>
 !!! info "Ashigaru Wallet"
 
-    A fork of Samourai Wallet created after the Samourai developers' arrest. Inherits all of Samourai's privacy features including Whirlpool, Stowaway, Stonewall, and riccochet.
+    A fork of Samourai Wallet created after the Samourai developers' arrest. Inherits all of Samourai's privacy features including Whirlpool, Stowaway, Stonewall, and Riccochet.
 
 <a id="azteco"></a>
 !!! info "Azteco"
@@ -641,7 +641,7 @@ description: Comprehensive terminology reference for Bitcoin privacy concepts.
     A feature that allows you to replace an unconfirmed transaction with a new one that pays a higher fee. Useful for speeding up stuck transactions. Can be used in wallet fingerprinting.
 
 <a id="riccochet"></a>
-!!! success "riccochet"
+!!! success "Riccochet"
 
     A technique where you create several self-payments to your own fresh addresses to simulate a change of ownership of your bitcoin before the final spend. Provides retrospective anonymity by adding distance between a CoinJoin and the final destination.
 
@@ -666,7 +666,7 @@ description: Comprehensive terminology reference for Bitcoin privacy concepts.
 <a id="samourai-wallet"></a>
 !!! info "Samourai Wallet"
 
-    A mobile wallet (Android only) focused on maximum privacy. Features include Whirlpool CoinJoin, PayJoin (Stowaway), riccochet, Stonewall, and PayNyms. Runs over Tor and connects to your own Dojo node. Now succeded by Ashigaru wallet.
+    A mobile wallet (Android only) focused on maximum privacy. Features include Whirlpool CoinJoin, PayJoin (Stowaway), Riccochet, Stonewall, and PayNyms. Runs over Tor and connects to your own Dojo node. Now succeded by Ashigaru wallet.
 
 <a id="satoshi-sat"></a>
 !!! info "Satoshi (sat)"
@@ -726,7 +726,7 @@ description: Comprehensive terminology reference for Bitcoin privacy concepts.
 <a id="steganographic-transaction"></a>
 !!! info "Steganographic Transaction"
 
-    A transaction designed to look like something it is not. Examples include PayJoin (looks like a normal payment but the receiver contributes an input), Stonewall (simulated CoinJoin from a single wallet), and riccochet (adds intermediate hops). These exploit the fact that chain analysis relies on heuristics.
+    A transaction designed to look like something it is not. Examples include PayJoin (looks like a normal payment but the receiver contributes an input), Stonewall (simulated CoinJoin from a single wallet), and Riccochet (adds intermediate hops). These exploit the fact that chain analysis relies on heuristics.
 
 <a id="stonewall"></a>
 !!! tip "Stonewall"
