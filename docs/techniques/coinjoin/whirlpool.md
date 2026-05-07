@@ -121,7 +121,7 @@ The image below shows a real Tx0 transaction from the Samourai Wallet era:
     | Output | Amount (BTC) | Purpose |
     |--------|-------------|---------|
     | 7 outputs | 0.05002117 each | Premix UTXOs (going to the premix account) |
-    | 1 OP_RETURN | 0 | [Coordinator fee](../../glossary.md#coordinator-fee) |
+    | 1 OP_RETURN | 0 | [Coordinator OP_RETURN](../../glossary.md#coordinator-fee) |
     | 1 output | 0.00175000 | Whirlpool pool entry fee |
     | 1 output | 0.02599109 | Doxxic change (going to the Bad Bank account) |
 
@@ -141,7 +141,7 @@ That's why Whirlpool sends doxxic change to a separate account called the "Bad B
 
 Tx0 involves two fee-related outputs:
 
-1. **[Coordinator fee](../../glossary.md#coordinator-fee) (OP_RETURN):** This is the service fee paid to the Whirlpool coordinator for running the mixing service. It's written as an [OP_RETURN](../../glossary.md#op_return) output — a way to embed data in the blockchain that doesn't carry any bitcoin value.
+1. **[Coordinator OP_RETURN](../../glossary.md#coordinator-fee):** This is the service fee paid to the Whirlpool coordinator for running the mixing service. It's written as an [OP_RETURN](../../glossary.md#op_return) output — a way to embed data in the blockchain that doesn't carry any bitcoin value.
 
 2. **Pool entry fee:** This is the one-time fee you pay to enter the pool. Once you've paid it, all your future remixes are completely free — no extra service fees, no extra mining fees.
 
