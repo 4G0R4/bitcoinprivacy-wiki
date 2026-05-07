@@ -281,19 +281,7 @@ The basic rule stays the same: let post-mix UTXOs remix, spend them carefully, a
 
 Whirlpool charges a [coordinator fee](../../glossary.md#coordinator-fee) for each Tx0. Remixes cost nothing extra — no additional service or mining fees.
 
-### Original Samourai Fees
-
-These were the fees when Samourai Wallet offered all five pool sizes:
-
-| Denomination | Fee | Percentage |
-|-------------|-----|------------|
-| 0.0005 BTC | 0.000005 BTC | 1% |
-| 0.001 BTC | 0.00001 BTC | 1% |
-| 0.01 BTC | 0.0001 BTC | 1% |
-| 0.05 BTC | 0.0005 BTC | 1% |
-| 0.5 BTC | 0.005 BTC | 1% |
-
-### Current Ashigaru Fees
+### Current Ashigaru Whirlpool Fees
 
 On Ashigaru, only two pools are currently active:
 
