@@ -1,0 +1,272 @@
+.whirlpool-stats-widget {
+  padding: 0.75rem 0 0.9rem;
+}
+
+.whirlpool-stats-widget--compact {
+  margin: 1rem 0;
+}
+
+.whirlpool-stats-error {
+  border: 1px solid var(--md-typeset-color);
+  border-radius: 0.35rem;
+  padding: 0.8rem;
+  background: var(--md-code-bg-color);
+}
+
+.whirlpool-topline,
+.whirlpool-footer,
+.whirlpool-updated,
+.whirlpool-total-inline span {
+  color: var(--md-default-fg-color--light);
+}
+
+.whirlpool-topline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1rem;
+  justify-content: space-between;
+  margin-bottom: 0.6rem;
+  font-size: 0.78rem;
+}
+
+.whirlpool-section {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.45rem;
+  background: var(--md-code-bg-color);
+  padding: 0.8rem 0.9rem;
+}
+
+.whirlpool-section-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) max-content;
+  gap: 0.75rem;
+  align-items: start;
+  margin-bottom: 0.7rem;
+  text-align: left;
+}
+
+.whirlpool-kicker {
+  margin: 0 0 0.12rem;
+  color: var(--md-accent-fg-color);
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.whirlpool-section h2 {
+  margin: 0;
+  font-size: 1.3rem;
+  line-height: 1.15;
+}
+
+.whirlpool-title-mobile {
+  display: none;
+}
+
+.whirlpool-total-inline {
+  min-width: max-content;
+  padding-top: 0;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  display: grid;
+  grid-template-rows: auto auto;
+  row-gap: 0.1rem;
+}
+
+.whirlpool-total-inline span {
+  display: block;
+  margin-bottom: 0.1rem;
+  font-size: 0.66rem;
+  letter-spacing: 0.05em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.whirlpool-total-inline strong {
+  display: block;
+  color: var(--md-accent-fg-color);
+  font-size: clamp(1.1rem, 3vw, 1.55rem);
+  line-height: 1;
+}
+
+.whirlpool-breakdown-layout {
+  display: grid;
+  grid-template-columns: 106px minmax(0, 1fr);
+  gap: 0.85rem;
+  align-items: center;
+}
+
+.whirlpool-donut-wrap {
+  margin: 0;
+}
+
+.whirlpool-donut {
+  display: block;
+  width: 96px;
+  height: 96px;
+  margin: 0 auto;
+}
+
+.whirlpool-donut-bg,
+.whirlpool-donut-segment {
+  fill: none;
+  stroke-width: 16;
+}
+
+.whirlpool-donut-bg {
+  stroke: var(--md-default-fg-color--lightest);
+}
+
+.whirlpool-donut-segment {
+  stroke-dasharray: 0 100;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+  transition: filter 160ms ease, opacity 160ms ease, stroke-width 160ms ease;
+  cursor: pointer;
+}
+
+.whirlpool-donut-segment:hover {
+  filter: drop-shadow(0 0 0.28rem currentColor);
+  opacity: 0.92;
+  stroke-width: 18;
+}
+
+.whirlpool-donut-small {
+  stroke: #448aff;
+}
+
+.whirlpool-donut-large {
+  stroke: #7c4dff;
+}
+
+.whirlpool-donut-hole {
+  fill: var(--md-code-bg-color);
+  pointer-events: none;
+}
+
+.whirlpool-table-wrap {
+  min-width: 0;
+  overflow-x: auto;
+}
+
+.whirlpool-pool-table {
+  display: table !important;
+  width: 100%;
+  margin: 0 !important;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+}
+
+.whirlpool-pool-table th,
+.whirlpool-pool-table td {
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+  padding: 0.42rem 0.55rem;
+  vertical-align: middle;
+}
+
+.whirlpool-pool-table thead th {
+  color: var(--md-default-fg-color--light);
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.whirlpool-pool-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.whirlpool-pool-table th:first-child,
+.whirlpool-pool-table td:first-child {
+  padding-left: 0;
+  text-align: left;
+}
+
+.whirlpool-pool-table th:not(:first-child),
+.whirlpool-pool-table td:not(:first-child) {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.whirlpool-pool-table tbody tr[data-pool] {
+  transition: background 160ms ease;
+}
+
+.whirlpool-pool-table tbody tr[data-pool]:hover {
+  background: color-mix(in srgb, var(--md-accent-fg-color) 8%, transparent);
+}
+
+.whirlpool-pool-name {
+  display: inline-flex;
+  gap: 0.4rem;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.whirlpool-swatch {
+  display: inline-block;
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 999px;
+}
+
+.whirlpool-swatch-small {
+  background: #448aff;
+}
+
+.whirlpool-swatch-large {
+  background: #7c4dff;
+}
+
+.whirlpool-footer {
+  margin: 0.6rem 0 0;
+  font-size: 0.78rem;
+}
+
+@media screen and (max-width: 700px) {
+  .whirlpool-section-heading {
+    grid-template-columns: 1fr;
+    gap: 0.35rem;
+    justify-items: center;
+    margin-bottom: 0.9rem;
+    text-align: center;
+  }
+
+  .whirlpool-kicker,
+  .whirlpool-title-desktop {
+    display: none;
+  }
+
+  .whirlpool-title-mobile {
+    display: inline;
+  }
+
+  .whirlpool-total-inline {
+    text-align: center;
+  }
+
+  .whirlpool-total-inline span {
+    font-size: 0.58rem;
+  }
+
+  .whirlpool-total-inline strong {
+    font-size: 1.05rem;
+  }
+
+  .whirlpool-breakdown-layout {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .whirlpool-pool-table {
+    font-size: 0.76rem;
+  }
+
+  .whirlpool-pool-table th,
+  .whirlpool-pool-table td {
+    padding: 0.38rem 0.35rem;
+  }
+}

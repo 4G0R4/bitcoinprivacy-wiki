@@ -495,6 +495,16 @@ Ashigaru continues to be actively maintained by an anonymous team committed to B
 
 ---
 
+## Ashigaru Whirlpool Stats
+
+The widget below shows current Ashigaru Whirlpool pool activity from [whirlpoolstats.xyz](https://www.whirlpoolstats.xyz/).
+
+<div data-whirlpool-stats-widget data-whirlpool-compact="true"></div>
+
+To understand what these values mean check out the [Ashigaru Whirlpool Stats](../../resources/whirlpool-stats.md) page.
+
+---
+
 ## Common Whirlpool Mistakes
 
 === "Spending Post-Mix UTXOs Together"
@@ -520,4 +530,5 @@ Ashigaru continues to be actively maintained by an anonymous team committed to B
 - [Loïc Morel's Educational Content](https://pandul.fr/) — Comprehensive Bitcoin privacy tutorials and guides
 - [Track Me If You Can — How Bitcoin Forward-Looking Anonymity Sets Work](https://bitcoinmagazine.com/technical/how-bitcoin-anonymity-sets-work) — Explanation of Whirlpool forward-looking anonymity sets
 - [Introducing Whirlpool Surge Cycles](https://medium.com/samourai-wallet/introducing-whirlpool-surge-cycles-b5b484a1670f) — Original Surge Cycles announcement from Samourai Wallet
+- [Ashigaru Whirlpool Stats](../../resources/whirlpool-stats.md) — Live Ashigaru Whirlpool pool totals and cycle counts
 - [Whirlpool Boltzmann Analysis](../../analysis/whirlpool.md) — Detailed entropy and link probability analysis of Whirlpool transactions
