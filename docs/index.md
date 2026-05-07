@@ -47,7 +47,7 @@ Anyone with an internet connection can inspect Bitcoin transactions, amounts, ad
 
     Learn why privacy protects Bitcoin's cash-like properties.
 
-    [Bitcoin Fungibility →](links/fungibility.md)
+    [Bitcoin Fungibility →](resources/fungibility.md)
 
 -   :material-calculator-variant:{ .lg .middle } __Advanced Analysis__
 

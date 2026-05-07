@@ -161,9 +161,11 @@ nav:
         - analysis/whirlpool.md
         - analysis/riccochet.md
   - Resources:
-    - links/index.md
-    - Bitcoin Fungibility: links/fungibility.md
-    - Self-Hosting am-i.exposed: links/selfhosting-am-i-exposed.md
+    - Useful Links: resources/useful-links.md
+    - Privacy Podcasts: resources/podcasts.md
+    - Miscellaneous:
+      - Bitcoin Fungibility: resources/fungibility.md
+      - Self-Hosting am-i.exposed: resources/selfhosting-am-i-exposed.md
   - Glossary:
     - Glossary: glossary.md
   - Donate:

@@ -10,6 +10,7 @@ A curated list of Bitcoin privacy tools and educational resources.
 
 | Resource | Description |
 |----------|-------------|
+| [Privacy Podcasts](podcasts.md) | Podcasts and shows covering Bitcoin privacy, freedom tech, personal privacy, and sovereignty |
 | [mempool.space](https://mempool.space) | Bitcoin block explorer and mempool visualizer |
 | [am-i.exposed](https://am-i.exposed) | Bitcoin privacy scanner |
 | [Self-hosting am-i.exposed](selfhosting-am-i-exposed.md) | Run am-i.exposed with your own mempool backend on Umbrel, StartOS, or Docker |

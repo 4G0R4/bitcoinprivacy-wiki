@@ -83,4 +83,4 @@ Each example shows:
     **For stronger privacy:**
     - Use Tor Browser
     - Wait before querying a recent transaction
-    - [Self-host am-i.exposed with your own mempool.space instance](../links/selfhosting-am-i-exposed.md)
+    - [Self-host am-i.exposed with your own mempool.space instance](../resources/selfhosting-am-i-exposed.md)
