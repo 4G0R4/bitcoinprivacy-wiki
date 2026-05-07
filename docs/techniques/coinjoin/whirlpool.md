@@ -141,7 +141,7 @@ That's why Whirlpool sends doxxic change to a separate account called the "Bad B
 
 Tx0 involves two fee-related outputs:
 
-1. **[Coordinator OP_RETURN](../../glossary.md#coordinator-fee):** This is the service fee paid to the Whirlpool coordinator for running the mixing service. It's written as an [OP_RETURN](../../glossary.md#op_return) output — a way to embed data in the blockchain that doesn't carry any bitcoin value.
+1. **[Coordinator OP_RETURN](../../glossary.md#coordinator-fee):** This is the OP_RETURN output used to signal that the service fee has been paid to the Whirlpool coordinator. It's written as an [OP_RETURN](../../glossary.md#op_return) output — a way to embed data in the blockchain that doesn't carry any bitcoin value.
 
 2. **Pool entry fee:** This is the one-time fee you pay to enter the pool. Once you've paid it, all your future remixes are completely free — no extra service fees, no extra mining fees.
 
