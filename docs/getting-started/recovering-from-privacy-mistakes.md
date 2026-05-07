@@ -198,11 +198,11 @@ The exchange may know:
 1. Do not send more post-mix funds to the same account unless necessary
 2. Keep records in case the exchange asks questions
 3. Avoid using regulated services as the destination for privacy-sensitive funds
-4. If you must send to a regulated service in the future, understand [Ricochet](../techniques/ricochet.md) and its limitations
+4. If you must send to a regulated service in the future, understand [riccochet](../techniques/riccochet.md) and its limitations
 
-!!! warning "Ricochet Is Not a Guarantee"
+!!! warning "riccochet Is Not a Guarantee"
 
-    Ricochet may reduce friction with simple blacklist heuristics, but it does not guarantee acceptance by any exchange or service.
+    riccochet may reduce friction with simple blacklist heuristics, but it does not guarantee acceptance by any exchange or service.
 
 ---
 

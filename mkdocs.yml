@@ -139,7 +139,7 @@ nav:
         - techniques/post-mix.md
         - techniques/payjoin.md
         - techniques/stonewall.md
-        - techniques/ricochet.md
+        - techniques/riccochet.md
   - Lightning Privacy:
     - Lightning Basics: lightning/basics.md
     - Lightning Privacy: lightning/privacy.md
@@ -159,7 +159,7 @@ nav:
         - analysis/consolidation.md
         - analysis/stonewall.md
         - analysis/whirlpool.md
-        - analysis/ricochet.md
+        - analysis/riccochet.md
   - Resources:
     - links/index.md
     - Bitcoin Fungibility: links/fungibility.md

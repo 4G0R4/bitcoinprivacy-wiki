@@ -63,22 +63,6 @@ BOLT12 offers use onion messaging instead of HTTP requests. This means they cann
 
 ---
 
-## User Stories
-
-### Reusable Payment Requests
-
-A musician can slap a QR code of their BOLT12 offer on a tip jar at their merch booth. Fans can tip them directly without the musician needing to generate a new QR code for every person.
-
-### Shadowy Super Coder Donations
-
-A pseudonymous Bitcoin developer can create separate offers for different areas of their work, maintaining separation between their various digital identities. By using route blinding, they can publish offers without revealing their node's public key.
-
-### Censorship Resistance
-
-Bitcoin payment schemes that rely on HTTP can be censored. BOLT12 offers do not rely on web servers or HTTP requests. Instead, they use onion messaging. Furthermore, the offer can use a [BIP 353](../glossary.md#bip-353) payment identifier, which looks like an email address and is easy to remember and share.
-
----
-
 ## Tradeoffs
 
 ### Positives

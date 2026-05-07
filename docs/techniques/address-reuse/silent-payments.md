@@ -144,6 +144,10 @@ You might notice a trend of incomplete silent payment support in wallets, this i
 
 ---
 
+!!! info "Silent Payments in Cake Wallet Guide"
+
+    An excellent guide on using Payjoin in Cake Wallet from [RUNNING ₿ITCOIN](https://x.com/Runningbitcoin1) can be found [here](https://planb.academy/en/tutorials/wallet/mobile/cake-wallet-fdf7b138-e743-406c-9b36-6007cc16aa1b).
+
 ## References
 
 - [Silent Payments, Explained](https://silentpayments.xyz/docs/explained) - Comprehensive explanation of the protocol

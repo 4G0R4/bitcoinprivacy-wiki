@@ -125,5 +125,3 @@ The negatives and tradeoffs of the improvements above will decrease the user exp
 ## References
 
 - [Lightning Privacy - Routing Analysis](https://lightningprivacy.com/en/routing-analysis)
-- [Suredbits PTLCs Introduction](https://blog.suredbits.com/an-introduction-to-ptlcs-point-time-locked-contracts/)
-- ["Counting Down Thunder" - Timing Analysis](https://github.com/tnull/counting-down-thunder)

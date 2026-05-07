@@ -247,6 +247,21 @@ Each step down this hierarchy gives you a bit less privacy, but every option is 
 
 ---
 
+!!! info "Stonewall guides"
+
+    An excellent guide on using Stonewall and StonewallX2 from [Loïc Morel](https://github.com/LoicPandul) can be found linked here:
+
+    - [Ashigaru - Stonewall Guide](https://planb.academy/en/tutorials/privacy/on-chain/ashigaru-stonewall-033daa45-d42c-40e1-9511-cea89751c3d4)
+    - [Sparrow Wallet - Stonewall Guide](https://planb.academy/en/tutorials/privacy/on-chain/sparrow-stonewall-6fcfd679-7038-4ee2-8bf7-de76a72f9392)
+    - [Ashigaru - Stonewall x2 Guide](https://planb.academy/en/tutorials/privacy/on-chain/ashigaru-stonewall-x2-05120280-f6f9-4e14-9fb8-c9e603f73e5b)
+
+    A prerequisite to using Stonewall in Ashigaru Wallet is having it installed securely, [here](https://planb.academy/en/tutorials/wallet/mobile/ashigaru-9f903b55-2e55-4b06-9627-80f8e178158f) is another written guide from Loïc on this topic, If you prefer a video format [here](https://www.youtube.com/watch?v=aykJ4eP-Veo) is a video from [BTC Sessions](https://x.com/BTCsessions).
+
+    A prerequisite to using Stonewall in Sparrow Wallet is having it installed securely, [here](https://planb.academy/en/tutorials/wallet/desktop/sparrow-c674e2ac-d46f-4c82-92a7-7d1b0e262f5d) is another written guide from Loïc on this topic, If you prefer a video format [here](https://www.youtube.com/watch?v=yJpvfRl03Tw&pp=ygUOc3BhcnJvdyB3YWxsZXQ%3D) is a video from [BTC Sessions](https://x.com/BTCsessions).
+
+
+---
+
 ## Common Stonewall Mistakes
 
 === "Using Stonewall for Every Transaction"

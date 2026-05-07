@@ -56,13 +56,13 @@ Each example shows:
 
     [View Example →](stonewall.md)
 
--   :material-swap-horizontal:{ .lg .middle } __Ricochet__
+-   :material-swap-horizontal:{ .lg .middle } __riccochet__
 
     ---
 
     A chain of 5 self-payments creating transactional distance. Learn how it protects against taint analysis and why the Classic variant is detectable.
 
-    [View Example →](ricochet.md)
+    [View Example →](riccochet.md)
 
 </div>
 

@@ -1,5 +1,5 @@
 ---
-description: A simple decision tree for choosing Bitcoin privacy tools like CoinJoin, PayJoin, Stonewall, Ricochet, BIP47, Silent Payments, Lightning, and lnproxy.
+description: A simple decision tree for choosing Bitcoin privacy tools like CoinJoin, PayJoin, Stonewall, riccochet, BIP47, Silent Payments, Lightning, and lnproxy.
 ---
 
 # Privacy Tools Decision Tree
@@ -115,7 +115,7 @@ Post-mix UTXOs need special care.
 |---|---|
 | Recipient supports PayJoin or Stowaway | Use [PayJoin & Stowaway](payjoin.md) |
 | Recipient does not support PayJoin | Use [Stonewall](stonewall.md) if available |
-| Regulated exchange or service | Avoid if possible; if necessary, consider [Ricochet](ricochet.md) |
+| Regulated exchange or service | Avoid if possible; if necessary, consider [riccochet](riccochet.md) |
 | Another wallet you control | Use fresh addresses and move UTXOs one at a time |
 
 !!! danger "Never Spend Multiple Post-Mix UTXOs Together"
@@ -126,7 +126,7 @@ Post-mix UTXOs need special care.
 
 ## If You Need Distance From a CoinJoin
 
-Use [Ricochet](ricochet.md) only for a specific problem: creating transactional distance between a CoinJoin and a final destination.
+Use [riccochet](riccochet.md) only for a specific problem: creating transactional distance between a CoinJoin and a final destination.
 
 Best for:
 
@@ -134,7 +134,7 @@ Best for:
 - Reducing friction with simple blacklist heuristics
 - Situations where you cannot avoid sending to a regulated service
 
-Ricochet does not create the same kind of privacy as CoinJoin. It creates distance. It is a pragmatic tool, not a magic eraser.
+riccochet does not create the same kind of privacy as CoinJoin. It creates distance. It is a pragmatic tool, not a magic eraser.
 
 ---
 
@@ -182,7 +182,7 @@ Limitations:
 | Break historical on-chain links | CoinJoin |
 | Spend privately to a compatible receiver | PayJoin or Stowaway |
 | Add ambiguity to a normal spend | Stonewall |
-| Add distance before a final destination | Ricochet |
+| Add distance before a final destination | riccochet |
 | Hide Lightning destination from sender-side observer | lnproxy |
 | Avoid linking UTXOs by accident | Coin control |
 
@@ -209,7 +209,7 @@ If you are new, follow this order:
 2. Use PayJoin when the recipient supports it
 3. Use CoinJoin to break historical links
 4. Use Stonewall when PayJoin is not available
-5. Use Ricochet only when you need transactional distance
+5. Use riccochet only when you need transactional distance
 6. Use Lightning for small payments, but understand its trade-offs
 7. Use lnproxy when paying Lightning invoices through an observer you do not want to reveal the destination to
 
@@ -223,6 +223,6 @@ If you are new, follow this order:
 - [CoinJoin Intro](coinjoin/index.md)
 - [PayJoin & Stowaway](payjoin.md)
 - [Stonewall](stonewall.md)
-- [Ricochet](ricochet.md)
+- [riccochet](riccochet.md)
 - [Lightning Privacy](../lightning/privacy.md)
 - [lnproxy](../lightning/lnproxy.md)

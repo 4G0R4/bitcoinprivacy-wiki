@@ -264,6 +264,14 @@ Soroban requires an authenticated channel between participants. It uses users' [
 
 ---
 
+!!! info "Stowaway Guide"
+
+    An excellent guide on using Stowaway in Ashigaru Wallet from [Loïc Morel](https://github.com/LoicPandul) can be found [here](https://planb.academy/en/tutorials/privacy/on-chain/ashigaru-stowaway-48a5c711-ee3d-44db-b812-c55913080eab).
+
+    A prerequisite to using Stowaway is having Ashigaru Wallet installed securely, [here](https://planb.academy/en/tutorials/wallet/mobile/ashigaru-9f903b55-2e55-4b06-9627-80f8e178158f) is another written guide from Loïc on this topic, If you prefer a video format [here](https://www.youtube.com/watch?v=aykJ4eP-Veo) is a video from [BTC Sessions](https://x.com/BTCsessions).
+
+---
+
 ## History and Origins
 
 In 2015, [LaurentMT](https://twitter.com/LaurentMT) first described this method as "steganographic transactions" in a document available [here](https://gist.githubusercontent.com/LaurentMT/e758767ca4038ac40aaf/raw/c8125f6a3c3d0e90246dc96d3b603690ab6f1dcc/gistfile1.txt). Samourai Wallet adopted and implemented it as "Stowaway" in 2018. PayJoin concepts are also discussed in [BIP78](https://github.com/bitcoin/bips/blob/master/bip-0078.mediawiki), and [BIP77](https://payjoin.org/docs/how-it-works/payjoin-v2-bip-77/).

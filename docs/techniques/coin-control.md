@@ -143,3 +143,10 @@ With coin control, **you choose which UTXOs to spend**. This gives you complete 
 | **Paying a merchant** | Use UTXOs that are not privacy-sensitive |
 | **Moving funds to cold storage** | Use coin control to avoid linking addresses |
 
+---
+
+!!! info "Coin Control Guide"
+
+    An excellent guide on using coin control from [f205sats](https://planb.academy/en/professor/f205sats-94b1f27b-c0bd-432c-a2b5-17db0f6dd435) can be found linked [here](https://planb.academy/en/tutorials/privacy/on-chain/coin-control-83dceab4-6615-4b09-b284-05f413fad1ab).
+
+    A precursor to practicing good coin control is good UTXO labelling, an excellent guide on labelling UTXOs from [Loïc Morel](https://github.com/LoicPandul) can be found [here](https://planb.academy/en/tutorials/privacy/on-chain/utxo-labelling-d997f80f-8a96-45b5-8a4e-a3e1b7788c52).

@@ -44,7 +44,7 @@ Here are two of the best mobile wallets, [Ashigaru](https://ashigaru.rs) and [Bl
     - Coin control
     - PayNyms (BIP47 stealth addresses)
     - Stonewall transactions
-    - Ricochet for transactional distance
+    - riccochet for transactional distance
 
     **Limitations:** Android only
 

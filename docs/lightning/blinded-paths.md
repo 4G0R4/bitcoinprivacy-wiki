@@ -104,6 +104,6 @@ A similar attack can be executed by waiting for nodes to go offline and attempti
 
 ## References
 
-- [Lightning Privacy - Blinded Paths + Trampoline Routing](https://lightningprivacy.com/en/blinded-paths-trampoline-routing)
+- [Lightning Privacy - Blinded Paths + Trampoline Routing](https://lightningprivacy.com/en/blinded-trampoline)
 - [BOLT - Route Blinding (Feature 24/25)](https://github.com/lightning/bolts/blob/master/04-onion-routing.md#route-blinding)
 - [BOLT - Trampoline Routing (Feature 56/57)](https://github.com/lightning/bolts/blob/master/04-onion-routing.md#trampoline-routing)

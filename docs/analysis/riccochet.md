@@ -1,28 +1,28 @@
 ---
-description: Analyze a Ricochet transaction chain and learn how it creates transactional distance to protect your privacy
+description: Analyze a riccochet transaction chain and learn how it creates transactional distance to protect your privacy
 ---
 
-# Ricochet
+# riccochet
 
-Let us look at a [Ricochet](../glossary.md#ricochet) transaction chain - a privacy technique that adds "transactional distance" between your bitcoin's history and its final destination.
+Let us look at a [riccochet](../glossary.md#riccochet) transaction chain - a privacy technique that adds "transactional distance" between your bitcoin's history and its final destination.
 
-This example demonstrates how Ricochet works in practice. Unlike [CoinJoin](../glossary.md#coinjoin) which provides prospective anonymity (hiding what happens next), Ricochet provides **retrospective anonymity** - it creates distance from your past. For the full explanation of how Ricochet works, see the [Ricochet technique page](../techniques/ricochet.md).
+This example demonstrates how riccochet works in practice. Unlike [CoinJoin](../glossary.md#coinjoin) which provides prospective anonymity (hiding what happens next), riccochet provides **retrospective anonymity** - it creates distance from your past. For the full explanation of how riccochet works, see the [riccochet technique page](../techniques/riccochet.md).
 
-## The Ricochet Chain
+## The riccochet Chain
 
-The image below shows a complete Ricochet chain as visualized by [am-i.exposed](https://am-i.exposed). From left to right, you can see all 5 transactions (hop 0 through hop 4) that make up this Ricochet:
+The image below shows a complete riccochet chain as visualized by [am-i.exposed](https://am-i.exposed). From left to right, you can see all 5 transactions (hop 0 through hop 4) that make up this riccochet:
 
-![Ricochet transaction graph showing 5 hops from origin to destination (left to right)](../images/riccochet-graph.png#only-dark){ loading=lazy }
-![Ricochet transaction graph showing 5 hops from origin to destination (left to right)](../images/riccochet-graph-light.png#only-light)
+![riccochet transaction graph showing 5 hops from origin to destination (left to right)](../images/riccochet-graph.png#only-dark){ loading=lazy }
+![riccochet transaction graph showing 5 hops from origin to destination (left to right)](../images/riccochet-graph-light.png#only-light)
 
 
-**Interactive graph:** [View this Ricochet chain on am-i.exposed](https://am-i.exposed/graph/?network=mainnet#graph=AgAFAAAAAAADipTblJoVymges2qo15EsVxVUoJirQK7e400UUiQZtwAA__8Ay3vN5XNBDuKW6ekJS9HAIWNn6hIhJEAPzRKEo5DsMVcBAQAAAtuDf5F2KiNiKqIugLKzsmhoH8DPMrZ6tQt0-URk_by3AgEAAQAptalZJCJ8Efcewo-gcPGbSjqTvxOxH41nMUfVUEnX7gMBAAIAe7XstuOLj2F6j7ly48Xp_0eHUAbFVQQsMS30KZ825qEEAQADAAAFAADCCjJBQzD0BwABQ1i56UJQxAgAAkPl-fpDJ6E0AANEMHGZQjnxBgAERHCJF0MjmjIAAgAAEFJpY2NvY2hldCBPcmlnaW4ABAtEZXN0aW5hdGlvbgAAAAA)
+**Interactive graph:** [View this riccochet chain on am-i.exposed](https://am-i.exposed/graph/?network=mainnet#graph=AgAFAAAAAAADipTblJoVymges2qo15EsVxVUoJirQK7e400UUiQZtwAA__8Ay3vN5XNBDuKW6ekJS9HAIWNn6hIhJEAPzRKEo5DsMVcBAQAAAtuDf5F2KiNiKqIugLKzsmhoH8DPMrZ6tQt0-URk_by3AgEAAQAptalZJCJ8Efcewo-gcPGbSjqTvxOxH41nMUfVUEnX7gMBAAIAe7XstuOLj2F6j7ly48Xp_0eHUAbFVQQsMS30KZ825qEEAQADAAAFAADCCjJBQzD0BwABQ1i56UJQxAgAAkPl-fpDJ6E0AANEMHGZQjnxBgAERHCJF0MjmjIAAgAAEFJpY2NvY2hldCBPcmlnaW4ABAtEZXN0aW5hdGlvbgAAAAA)
 
 ---
 
 ## What We Notice
 
-This Ricochet chain consists of **5 transactions** (hops 0 through 4):
+This riccochet chain consists of **5 transactions** (hops 0 through 4):
 
 | Hop | Transaction ID | Structure | Description |
 |-----|----------------|-----------|-------------|
@@ -34,29 +34,29 @@ This Ricochet chain consists of **5 transactions** (hops 0 through 4):
 
 ### Key Observations
 
-- **Hop 0 is detectable**: The 100,000 sat service fee is sent to a known Ashigaru address (`bc1qsc887pxce0r3qed50e8he49a3amenemgptakg2`). This is the fingerprint that allows chain analysis to identify this as a Ricochet.
+- **Hop 0 is detectable**: The 100,000 sat service fee is sent to a known Ashigaru address (`bc1qsc887pxce0r3qed50e8he49a3amenemgptakg2`). This is the fingerprint that allows chain analysis to identify this as a riccochet.
 - **Hops 1-3 are simple**: Each is a straightforward 1-input, 1-output transaction. The amount decreases slightly at each hop (approximately 960 sats) due to miner fees.
 - **Hop 4 delivers to destination**: The final hop sends the remaining amount to the intended recipient (in this case, likely an exchange).
 - **Consecutive blocks**: All hops were confirmed in consecutive blocks (933,680 through 933,684), indicating this is the "Classic" variant rather than "Staggered Delivery."
 
 ---
 
-## Why Ricochet Is Not Analyzed with Boltzmann Entropy
+## Why riccochet Is Not Analyzed with Boltzmann Entropy
 
-You may notice that this page does not show a Boltzmann entropy calculation for the Ricochet chain. This is intentional.
+You may notice that this page does not show a Boltzmann entropy calculation for the riccochet chain. This is intentional.
 
-**Boltzmann entropy applies to a single transaction**, measuring the ambiguity within that transaction's structure. Ricochet is a **chain of 5 separate transactions**, not a single transaction.
+**Boltzmann entropy applies to a single transaction**, measuring the ambiguity within that transaction's structure. riccochet is a **chain of 5 separate transactions**, not a single transaction.
 
-Each individual hop in the Ricochet chain has **0 bits of entropy**:
+Each individual hop in the riccochet chain has **0 bits of entropy**:
 
 - **Hop 0:** 1 input → 3 outputs. Only 1 valid interpretation (the input funds all 3 outputs).
 - **Hops 1-4:** 1 input → 1 output. Only 1 valid interpretation (the input funds the output).
 
-The privacy benefit of Ricochet does not come from structural ambiguity within a single transaction. It comes from **transactional distance** - the difficulty of linking the origin to the destination across multiple hops. This is a different kind of privacy than what Boltzmann entropy measures.
+The privacy benefit of riccochet does not come from structural ambiguity within a single transaction. It comes from **transactional distance** - the difficulty of linking the origin to the destination across multiple hops. This is a different kind of privacy than what Boltzmann entropy measures.
 
 ---
 
-## How Ricochet Works
+## How riccochet Works
 
 ### The Problem It Solves
 
@@ -64,9 +64,9 @@ When you perform a [CoinJoin](../glossary.md#coinjoin), your mixed coins are pri
 
 This "coinjoined" label can affect [fungibility](../glossary.md#fungibility). Regulated entities like exchanges may refuse CoinJoin-sourced [UTXOs](../glossary.md#utxo), demand explanations, or even freeze accounts.
 
-### The Ricochet Solution
+### The riccochet Solution
 
-Ricochet creates **transactional distance** by inserting 4 self-payments between your CoinJoin output and the final destination. Each hop sends funds to a fresh address you control, simulating a change of ownership.
+riccochet creates **transactional distance** by inserting 4 self-payments between your CoinJoin output and the final destination. Each hop sends funds to a fresh address you control, simulating a change of ownership.
 
 ``` mermaid
 graph LR
@@ -84,15 +84,15 @@ Four hops is often enough to defeat their heuristics while keeping false positiv
 
 ---
 
-## Ricochet Variants
+## riccochet Variants
 
-=== "Classic Ricochet"
+=== "Classic riccochet"
 
     All 5 transactions are broadcast together and confirmed in consecutive blocks. The service fee (100,000 sats for Ashigaru) is paid as a single output in hop 0 to a known, reused address.
 
     **Detectable:** Yes - the reused fee address is a clear on-chain fingerprint.
 
-=== "Staggered Delivery (Reinforced Ricochet)"
+=== "Staggered Delivery (Reinforced riccochet)"
 
     Each transaction is broadcast at a different time and confirmed in a different block. The service fee is split across hops 1-4 in randomized amounts sent to unique [BIP47](../glossary.md#bip-bitcoin-improvement-proposal)-derived addresses.
 
@@ -106,38 +106,38 @@ Four hops is often enough to defeat their heuristics while keeping false positiv
 
 ## What an Analyst Can Figure Out
 
-From this Ricochet chain, an analyst can determine:
+From this riccochet chain, an analyst can determine:
 
-- **This is a Ricochet**: The 100,000 sat payment to the known Ashigaru fee address identifies hop 0 immediately
+- **This is a riccochet**: The 100,000 sat payment to the known Ashigaru fee address identifies hop 0 immediately
 - **The full chain**: Once hop 0 is identified, hops 1-4 can be traced by following the 1-input, 1-output pattern
 - **The final destination**: Hop 4 reveals where the funds ultimately went
-- **The variant used**: Consecutive blocks indicate Classic Ricochet, not Staggered Delivery
+- **The variant used**: Consecutive blocks indicate Classic riccochet, not Staggered Delivery
 
 **What they cannot determine:**
 
-- **Who performed the Ricochet**: The origin address may or may not be linked to a real identity
-- **Why Ricochet was used**: It could be after a CoinJoin, or simply for general privacy
+- **Who performed the riccochet**: The origin address may or may not be linked to a real identity
+- **Why riccochet was used**: It could be after a CoinJoin, or simply for general privacy
 - **The original source**: If the origin UTXO was well-mixed, tracing backward yields nothing
 
 ---
 
 ## Conclusion
 
-This Ricochet example shows the **Classic variant without PayNym** - which is detectable by design. The reused fee address (`bc1qsc887pxce0r3qed50e8he49a3amenemgptakg2`) is a clear fingerprint that any chain analysis tool can spot.
+This riccochet example shows the **Classic variant without PayNym** - which is detectable by design. The reused fee address (`bc1qsc887pxce0r3qed50e8he49a3amenemgptakg2`) is a clear fingerprint that any chain analysis tool can spot.
 
 **What could have been done better:**
 
 - **Use Staggered Delivery**: Broadcasting each hop in a different block at different times makes the chain much harder to detect
 - **Use PayNym fee splitting**: Splitting the service fee across hops using unique BIP47-derived addresses eliminates the reused address fingerprint (This is automated with staggered delivery).
-- **Combine with other techniques**: Using Ricochet after a CoinJoin and with [Tor](../glossary.md#tor) provides layered privacy
+- **Combine with other techniques**: Using riccochet after a CoinJoin and with [Tor](../glossary.md#tor) provides layered privacy
 
-**The key takeaway:** Ricochet is a pragmatic tool for increasing **retrospective anonymity** by adding distance. It does not guarantee acceptance by any third party, but it commonly reduces friction with blacklist heuristics. Ideally, avoid sending CoinJoin-sourced coins to regulated entities altogether - but if you must, Ricochet could help.
+**The key takeaway:** riccochet is a pragmatic tool for increasing **retrospective anonymity** by adding distance. It does not guarantee acceptance by any third party, but it commonly reduces friction with blacklist heuristics. Ideally, avoid sending CoinJoin-sourced coins to regulated entities altogether - but if you must, riccochet could help.
 
 ---
 
 ## References
 
-- [Ricochet technique page](../techniques/ricochet.md) - How to use Ricochet in Ashigaru
+- [riccochet technique page](../techniques/riccochet.md) - How to use riccochet in Ashigaru
 - [BIP47 PayNyms](../techniques/address-reuse/bip47.md) - Reusable payment codes for private receiving
 - [am-i.exposed](https://am-i.exposed) - Bitcoin privacy scanner used to analyze this transaction
-- [PlanB Academy](https://planb.academy/en/tutorials/privacy/on-chain/ashigaru-ricochet-e0bb1afe-becd-44a6-a940-88a463756589)
+- [PlanB Academy](https://planb.academy/en/tutorials/privacy/on-chain/ashigaru-riccochet-e0bb1afe-becd-44a6-a940-88a463756589)

@@ -137,6 +137,18 @@ The notification transaction has some privacy implications:
 
 ---
 
+!!! info "BIP47 Guide - Ashigaru"
+
+    [Ashigaru](https://ashigaru.rs) is a Bitcoin wallet that continues the Samourai Wallet project in a new form. In April 2024, the founders of Samourai Wallet were arrested by American authorities and their servers were seized. While the original Samourai app remained usable for a time, it is no longer maintained.
+
+    Ashigaru is a free, open-source fork maintained by an anonymous team to preserve Samourai's functionality and original philosophy: defending the privacy and sovereignty of Bitcoin users.
+
+    An excellent guide on using BIP47 Reusable Payment Codes from [Loïc Morel](https://github.com/LoicPandul) can be found [here](https://planb.academy/en/tutorials/privacy/on-chain/paynym-bip47-a492a70b-50eb-4f95-a766-bae2c5535093).
+
+    A prerequisite to using BIP47 in Ashigaru Wallet is having it installed securely, [here](https://planb.academy/en/tutorials/wallet/mobile/ashigaru-9f903b55-2e55-4b06-9627-80f8e178158f) is another written guide from Loïc on this topic, If you prefer a video format [here](https://www.youtube.com/watch?v=aykJ4eP-Veo) is a video from [BTC Sessions](https://x.com/BTCsessions).
+
+---
+
 ??? info "Andreas Antonopoulos on reusable payment codes"
 
     The video below features Andreas Antonopoulos explaining the idea behind reusable payment codes: one public identifier can be shared, while each payment still goes to a fresh on-chain address.

@@ -74,23 +74,6 @@ Using lnproxy is straightforward:
    - The amount is the original amount plus a small relay fee
 5. **Pay the proxy invoice** using your Lightning wallet
 
-### Example API Call
-
-```bash
-curl --header "Content-Type: application/json" \
-    --request POST \
-    --data '{"invoice":"<bolt11 invoice>"}' \
-    <relay URL>
-```
-
-The relay returns a JSON response with the proxy invoice:
-
-```json
-{
-  "proxy_invoice": "lnbc..."
-}
-```
-
 ---
 
 ## Trust Model
