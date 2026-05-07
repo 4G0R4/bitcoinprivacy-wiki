@@ -65,8 +65,6 @@ That is why privacy and fungibility are connected. Privacy tools are not only ab
 
 When you buy bitcoin from a regulated exchange, that exchange links your identity to the withdrawal address. From there, chain analysis can follow your activity forward. If you later send those coins to someone else, they may inherit part of that history.
 
-This is why the site repeatedly recommends separating [KYC](../glossary.md#kyc-know-your-customer) and non-KYC funds. Once an identity link exists, it cannot be erased from the historical record.
-
 ### Chain Analysis and Blacklisting
 
 [Chain analysis](../glossary.md#chain-analysis) companies apply heuristics to public transaction data and sell risk scores to exchanges, banks, governments, and other institutions. These scores can influence whether a deposit is accepted, delayed, questioned, or rejected.
