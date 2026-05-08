@@ -88,12 +88,41 @@ The only trust assumption is that the relay will actually pay the original invoi
 
 ---
 
+## Chaining Multiple Relays
+
+A single relay sees both the sender and the recipient. If you want to improve privacy, you can chain multiple relays in sequence. This means the first relay only sees you and the second relay, and the second relay only sees the first relay and the final recipient.
+
+### How to Chain Relays
+
+1. Visit [lnproxy.org](https://lnproxy.org)
+2. Use the dropdown to select your first relay (or leave it on "Random relay")
+3. Paste the original invoice and generate a wrapped proxy invoice
+4. Copy the proxy invoice
+5. Select a different relay from the dropdown
+6. Paste the proxy invoice from step 4
+7. Wrap it again to get a second-layer proxy invoice
+8. Pay the final proxy invoice
+
+You can repeat this process with additional relays if desired.
+
+### Trade-Offs and Warnings
+
+Chaining relays is temperamental and comes with several drawbacks:
+
+- **Fees multiply**: Each relay adds its own fee. Two relays means roughly double the fees.
+- **Harder to find a route**: Extra relays mean extra hops, which makes it harder for wallets to find a valid payment path. With enough relays, payments may fail entirely.
+- **More points of failure**: Each additional relay is another service that must be online and responsive. If any relay in the chain goes offline or times out, the entire payment fails.
+- **Not officially supported**: While chaining works in practice, it is not an officially documented or guaranteed feature.
+
+For most users, a single relay provides a good balance of privacy and reliability. Chain relays only if you have a specific threat model that requires it and are willing to accept the added complexity.
+
+---
+
 ## Limitations
 
 - **AMP invoices not supported**: Relays cannot create proxy invoices for Atomic Multi-Path Payment invoices since there is no payment hash reveal mechanism
 - **Relay fees**: The proxy invoice amount will be slightly higher than the original to cover routing costs
 - **Relay availability**: You need to trust that the relay will be online and responsive when you need it
-- **Single relay**: Using a single relay means the relay itself knows both parties. Using multiple relays in sequence would improve privacy but is not currently supported
 
 ---
 
