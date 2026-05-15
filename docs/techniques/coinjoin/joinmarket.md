@@ -80,11 +80,13 @@ Unlike Whirlpool, JoinMarket does not use fixed denominations. Takers can mix an
 This flexibility is both a strength and a weakness:
 
 **Strengths:**
+
 - Mix any amount
 - No need to split into fixed denominations
 - More efficient for large amounts
 
 **Weaknesses:**
+
 - Outputs may not be as uniform
 - Requires more careful analysis to ensure privacy
 
@@ -101,10 +103,6 @@ Unlike Whirlpool, which guarantees that every output in a round is exactly the s
 ### Flexible Denominations Reduce Uniformity
 
 The ability to mix any amount sounds convenient, but it comes at a privacy cost. Fixed-denomination CoinJoins like Whirlpool produce outputs that are completely indistinguishable from one another — every output looks identical. JoinMarket's flexible model means outputs can vary in size, which requires users to do more careful analysis to make sure they are actually getting privacy. If you are not paying attention, your mixed coins might still stand out.
-
-### No Built-In Re-Mixing Prevention
-
-JoinMarket does not have built-in safeguards to stop already-mixed [UTXOs](../../glossary.md#utxo) from being mixed again. In other words, the software will not warn you if you accidentally put coins through a CoinJoin that have already been through one. Re-mixing the same coins wastes fees and does not meaningfully increase your [anonymity set](../../glossary.md#anonymity-set). Other implementations handle this automatically — Whirlpool, for example, separates pre-mix and post-mix coins into different accounts so this mistake cannot happen by accident.
 
 ---
 
@@ -224,18 +222,6 @@ Makers set their own fees. You can view the [orderbook](https://nixbitcoin.org/o
     Finding counterparties can take time. Be patient and let the network work.
 
 </div>
-
----
-
-## Liquidity and the "Sub-Niche" Problem
-
-To understand JoinMarket's privacy limitations, it helps to think about niches within niches. Bitcoin itself is already a niche within the world of financial transactions. [CoinJoin](../../glossary.md#coinjoin) users are a sub-niche within Bitcoin — only a fraction of Bitcoin users bother with privacy tools. And JoinMarket users are an even smaller fraction of that group.
-
-This matters because CoinJoin privacy depends on having a large pool of participants. The more people mixing, the bigger your [anonymity set](../../glossary.md#anonymity-set) and the harder it is for analysts to trace your coins. A small user base means fewer people to hide among.
-
-JoinMarket's [maker](../../glossary.md#maker)-[taker](../../glossary.md#taker) model helps somewhat. Makers earn fees by providing liquidity, which gives people a financial reason to keep their bots running and available. This creates a self-sustaining market for mixing. But the fundamental limitation remains: there are only so many JoinMarket users, and that caps the size of the anonymity sets you can achieve.
-
-Compare this to [Whirlpool](whirlpool.md), which benefits from a more streamlined user experience and automatic remixing, or Wasabi, which attracts users with its simple interface. These alternatives pull from the same pool of privacy-conscious Bitcoin users, further fragmenting the already small CoinJoin community.
 
 ---
 
