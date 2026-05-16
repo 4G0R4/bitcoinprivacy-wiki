@@ -8,7 +8,7 @@ Now let us look at a transaction that does privacy right: a Whirlpool [CoinJoin]
 
 This example demonstrates the [Boltzmann entropy](../boltzmann/index.md) framework in action. If you have not yet read the [Boltzmann Entropy section](../boltzmann/index.md), we recommend starting there to understand the mathematical foundation.
 
-![Whirlpool CoinJoin transaction scanned by am-i.exposed](../images/whirlpool.png){ loading=lazy }
+![Whirlpool CoinJoin transaction scanned by am-i.exposed](../images/whirlpool.png)
 
 **Transaction ID:** [`323df21f...`](https://am-i.exposed/#tx=323df21f0b0756f98336437aa3d2fb87e02b59f1946b714a7b09df04d429dec2)
 
@@ -22,7 +22,7 @@ This transaction has exactly 5 inputs and exactly 5 outputs, all of the same val
 
 Let us look at the link probability matrix:
 
-![Whirlpool analysis - link probability matrix](../images/whirlpool-analysis.png){ loading=lazy }
+![Whirlpool analysis - link probability matrix](../images/whirlpool-analysis.png)
 
 ---
 

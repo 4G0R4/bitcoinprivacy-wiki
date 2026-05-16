@@ -38,7 +38,7 @@ If there is only **one** valid story, everyone knows exactly what happened - zer
 
 Consider a straightforward transaction with one input and two outputs:
 
-![A simple 1-input, 2-output transaction](../images/one-in-two-out.png){ loading=lazy }
+![A simple 1-input, 2-output transaction](../images/one-in-two-out.png)
 
 **Transaction ID:** [`639fc4b0...`](https://am-i.exposed/#tx=639fc4b0cace9370ed9e113b6e80a5765a27ebe601dd03ef350ada5b01bd2846)
 
@@ -50,7 +50,7 @@ There is only **one** valid story: the input funded both outputs. **Entropy = 0 
 
 Now compare to a 5-party Whirlpool CoinJoin:
 
-![Whirlpool CoinJoin transaction](../images/whirlpool.png){ loading=lazy }
+![Whirlpool CoinJoin transaction](../images/whirlpool.png)
 
 - **5 inputs** of 5,000,000 sats each (excluding miner fees)
 - **5 outputs** of 5,000,000 sats each

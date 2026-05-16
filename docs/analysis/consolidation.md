@@ -8,7 +8,7 @@ Now let us look at one of the most damaging privacy mistakes you can make: conso
 
 From a [Boltzmann entropy](../boltzmann/index.md) perspective, this is the worst possible outcome: **zero entropy, zero ambiguity**. If you have not yet read about Boltzmann entropy, we recommend starting with the [What Is Entropy?](../boltzmann/what-is-entropy.md) page to understand why this matters.
 
-![UTXO consolidation transaction scanned by am-i.exposed](../images/consolidation.png){ loading=lazy }
+![UTXO consolidation transaction scanned by am-i.exposed](../images/consolidation.png)
 
 **Transaction ID:** `1b58afe9e2a9ecaebfca744ab93658d335cf010fbb32e7731e8126276820b8c1`
 
@@ -20,7 +20,7 @@ From a [Boltzmann entropy](../boltzmann/index.md) perspective, this is the worst
 
 This transaction takes 10 separate UTXOs and combines them into a single output. Let us look at the [Boltzmann entropy](../glossary.md#boltzmann-entropy) analysis:
 
-![Consolidation analysis - link probability matrix](../images/consolidation-analysis.png){ loading=lazy }
+![Consolidation analysis - link probability matrix](../images/consolidation-analysis.png)
 
 The link probability matrix shows that every single input is 100% linked to the single output. There is zero ambiguity.
 

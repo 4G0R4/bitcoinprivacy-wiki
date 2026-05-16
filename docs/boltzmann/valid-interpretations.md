@@ -39,7 +39,7 @@ Every Bitcoin transaction has:
 
 Consider this 2-input, 2-output transaction:
 
-![A 2-input, 2-output transaction](../images/two-in-two-out.png){ loading=lazy }
+![A 2-input, 2-output transaction](../images/two-in-two-out.png)
 
 **Transaction ID:** [`ce3d95a2...`](https://am-i.exposed/#tx=ce3d95a2ec0237898ed0e5961699408e67b19fc2fcce7dfdbf439cbc3b797921)
 
@@ -215,7 +215,7 @@ Looking at the 2-input, 2-output transaction above in isolation (its **intrinsic
 
 However, when we look at the **actual entropy** (incorporating blockchain context), the picture changes. In this specific transaction, [am-i.exposed](https://am-i.exposed) uncovered **2 deterministic links** because the same address appears in both an input and an output.
 
-![Link Probability Matrix showing 2 deterministic links](../images/two-in-two-out-analysis.png){ loading=lazy }
+![Link Probability Matrix showing 2 deterministic links](../images/two-in-two-out-analysis.png)
 
 When an address that funded the transaction also receives an output, that output is certainly [change](../glossary.md#change). This reveals which other outputs are payments and the exact payment amount. This is an example of **actual entropy being lower than intrinsic entropy** - the blockchain context reduced the number of valid interpretations.
 

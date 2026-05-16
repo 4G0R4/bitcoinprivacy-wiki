@@ -91,8 +91,8 @@ Use grid cards for overviews and best practices:
 - Provide dark/light variants using `#only-dark` and `#only-light` fragments:
 
 ```markdown
-![Description](../images/example.png#only-dark){ loading=lazy }
-![Description](../images/example.png#only-light){ loading=lazy }
+![Description](../images/example.png#only-dark)
+![Description](../images/example.png#only-light)
 ```
 
 ### Glossary Links

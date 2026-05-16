@@ -12,7 +12,7 @@ This example demonstrates how Riccochet works in practice. Unlike [CoinJoin](../
 
 The image below shows a complete Riccochet chain as visualized by [am-i.exposed](https://am-i.exposed). From left to right, you can see all 5 transactions (hop 0 through hop 4) that make up this Riccochet:
 
-![Riccochet transaction graph showing 5 hops from origin to destination (left to right)](../images/riccochet-graph.png#only-dark){ loading=lazy }
+![Riccochet transaction graph showing 5 hops from origin to destination (left to right)](../images/riccochet-graph.png#only-dark)
 ![Riccochet transaction graph showing 5 hops from origin to destination (left to right)](../images/riccochet-graph-light.png#only-light)
 
 

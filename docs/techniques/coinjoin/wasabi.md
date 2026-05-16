@@ -55,7 +55,7 @@ WabiSabi (Wasabi 2.0) moved closer to the [Whirlpool](whirlpool.md) model by all
 
 The image below shows a WabiSabi (Wasabi Wallet) CoinJoin transaction as visualised by [am-i.exposed](https://am-i.exposed). Notice the large number of inputs and various sets of variable denomination outputs that distinguish WabiSabi from fixed-denomination CoinJoins like Whirlpool.
 
-![WabiSabi CoinJoin transaction scanned by am-i.exposed](../../images/wabisabi.png){ loading=lazy }
+![WabiSabi CoinJoin transaction scanned by am-i.exposed](../../images/wabisabi.png)
 
 ---
 

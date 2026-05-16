@@ -36,11 +36,11 @@ In plain English: count how many valid interpretations include a link between in
 
 Let us start with a 5-party Whirlpool CoinJoin:
 
-![Whirlpool CoinJoin](../images/whirlpool.png){ loading=lazy }
+![Whirlpool CoinJoin](../images/whirlpool.png)
 
 This has 1,496 valid interpretations. The LPM looks like this:
 
-![Whirlpool link probability matrix](../images/whirlpool-analysis.png){ loading=lazy }
+![Whirlpool link probability matrix](../images/whirlpool-analysis.png)
 
 | | O1 | O2 | O3 | O4 | O5 |
 |---|---|---|---|---|---|
@@ -64,7 +64,7 @@ You might expect 20% (1 in 5) for each cell, but it is 34.2% because of many-to-
 
 Now consider a simpler transaction:
 
-![2-input, 2-output transaction](../images/two-in-two-out.png){ loading=lazy }
+![2-input, 2-output transaction](../images/two-in-two-out.png)
 
 **Transaction ID:** [`ce3d95a2...`](https://am-i.exposed/#tx=ce3d95a2ec0237898ed0e5961699408e67b19fc2fcce7dfdbf439cbc3b797921)
 
@@ -87,7 +87,7 @@ Looking at this transaction in isolation, there are 2 valid interpretations:
 
 However, when we incorporate blockchain context (the same address appears in both an input and an output), the [actual entropy](../glossary.md#actual-entropy) reveals **2 deterministic links**:
 
-![Link probability matrix showing 2 deterministic links](../images/two-in-two-out-analysis.png){ loading=lazy }
+![Link probability matrix showing 2 deterministic links](../images/two-in-two-out-analysis.png)
 
 The LPM shows:
 

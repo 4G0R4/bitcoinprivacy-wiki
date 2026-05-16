@@ -26,7 +26,7 @@ Whirlpool is a CoinJoin protocol where participants come together to mix their b
 
 The image below shows a Whirlpool CoinJoin transaction as visualised by [am-i.exposed](https://am-i.exposed). Notice the beautiful equal outputs at a fixed denomination — the signature pattern of Whirlpool.
 
-![Whirlpool CoinJoin transaction scanned by am-i.exposed](../../images/whirlpool.png){ loading=lazy }
+![Whirlpool CoinJoin transaction scanned by am-i.exposed](../../images/whirlpool.png)
 
 ---
 
@@ -110,7 +110,7 @@ Each premix output is slightly larger than the pool denomination — the extra s
 
 The image below shows a real Tx0 transaction from the Samourai Wallet era:
 
-![Tx0 transaction scanned by am-i.exposed](../../images/tx0.png){ loading=lazy }
+![Tx0 transaction scanned by am-i.exposed](../../images/tx0.png)
 
 - **Transaction ID:** [`cc27f73a...`](https://am-i.exposed/#tx=cc27f73a536bed8edb60f580f43b5cb75a17e940fc40fce7f6e710353b0a18da)
 - **Block:** #707,908
@@ -210,7 +210,7 @@ This assumes each original output enters a separate normal 5-output Whirlpool ro
 
 The graph below shows a real section of the Bitcoin transaction graph visualized with the [am-i.exposed transaction graph explorer](https://am-i.exposed/graph/?network=mainnet#graph=AgAKAAAAAADb2iyUo0Ndbat7jjcmmtQPLzd1GXY-Eb6PvoHOQNaB_QAA__8A7eJPDK2EyeRdTBATZC9_wJklZBjIgEkiI9EQXnkvlH4BAQAAArdudTcgSWBXicrnnWBjW-H6SD0dLId6BeyT-5sZk4SkAQEAAANgBsd2JJT9Y95Rw1b_ONfHBdahC2E4xX-aAk6Tk3QghwEBAAAEaPg4N1Xg_dgTCL-Hi3WPcVCM1EJ373oDvYh3_jHy2eMCAQADAt1QNpilG584gSGZYzSKtOZmoqEJGbcTAeMN_YXhqIW_AgEAAgEyPfIfCwdW-YM2Q3qj0vuH4CtZ8ZRrcUp7Cd8E1CnewgIBAAICcELXRM-3_ofJsrzv6hOBcGSkUKKnOHy1tAzK_JN62AYCAQACAy1m8xT7BUTqP2iJdIZPErEJq0hhF9rw_5xHkIr4vjJnAgEAAgT1dLE9xOfaDM2lDkjN5_YbWOcT59LgDs58z0xt3DPXXwIBAAECAAoAAUSxAADBcAAAAAJEsKAAQrQAAAADRLCAAENHAAAAAESLAABCtc3CAARE12qrQ7QqqwAFRNcKq8KGAAAABkTXNVVCDAAAAAdE10qrQw8AAAAIRNdgAEN8qqsACUTW9VXDLgAAAAoAAgpBbm9uc2V0ICs0AAMKQW5vbnNldCArNAABCkFub25zZXQgKzQACQpBbm9uc2V0ICs0AAUKQW5vbnNldCArNAAGCkFub25zZXQgKzQABwpBbm9uc2V0ICs0AAgKQW5vbnNldCArNAAECkFub25zZXQgKzQAABRPcmlnaW5hbCBBbm9uc2V0ID0gNQABAETzIABCy1VVQxSqq0JCqqsSRmluYWwgQW5vbnNldCA9IDQxAAA). Each rectangle is a normal 5-input, 5-output Whirlpool transaction.
 
-![Forward-looking anonymity set graph showing a Whirlpool anonset growing from 5 to 41](../../images/forward-looking-anonset-graph.png){ loading=lazy }
+![Forward-looking anonymity set graph showing a Whirlpool anonset growing from 5 to 41](../../images/forward-looking-anonset-graph.png)
 
 ??? example "View the anonset calculation"
 

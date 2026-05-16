@@ -22,7 +22,7 @@ Stonewall is a method of creating a transaction with a **minimum of 2 inputs** a
 
 The image below shows a Stonewall transaction as analyzed by [am-i.exposed](https://am-i.exposed). Notice the 4 outputs with 2 being equal-value outputs, which mimics the appearance of a 2-party CoinJoin.
 
-![Stonewall transaction scanned by am-i.exposed](../images/stonewall.png){ loading=lazy }
+![Stonewall transaction scanned by am-i.exposed](../images/stonewall.png)
 
 ---
 

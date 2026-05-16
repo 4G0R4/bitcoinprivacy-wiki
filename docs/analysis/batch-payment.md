@@ -6,7 +6,7 @@ description: Analyze a batch payment transaction and learn what round amounts re
 
 Let us start with a common transaction pattern: someone sending bitcoin to five different addresses in one transaction.
 
-![Batch payment transaction scanned by am-i.exposed](../images/batch-payment.png){ loading=lazy }
+![Batch payment transaction scanned by am-i.exposed](../images/batch-payment.png)
 
 **Transaction ID:** [`6ae34b88...`](https://am-i.exposed/#tx=6ae34b88b5d9a3898d64264e7eb481df761b014becaf2d992e565722e596681d)
 
@@ -20,7 +20,7 @@ Let us start with a common transaction pattern: someone sending bitcoin to five 
 
 When we scan this transaction with [am-i.exposed](https://am-i.exposed), several things stand out:
 
-![Batch payment findings from am-i.exposed](../images/batch-payment-findings.png){ loading=lazy }
+![Batch payment findings from am-i.exposed](../images/batch-payment-findings.png)
 
 ### 1. Round Amount Output Detected
 

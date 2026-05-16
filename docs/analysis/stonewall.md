@@ -7,7 +7,7 @@ description: Analyze a Stonewall transaction and learn how it creates plausible 
 Let us look at a [Stonewall](../glossary.md#stonewall) transaction - a technique that creates a transaction indistinguishable from a 2-party [CoinJoin](../glossary.md#coinjoin), but performed by a single user.
 
 Here is the example we will be looking at:
-![Stonewall transaction scanned by am-i.exposed](../images/stonewall.png){ loading=lazy }
+![Stonewall transaction scanned by am-i.exposed](../images/stonewall.png)
 
 **Transaction ID:** [`5c038364...`](https://am-i.exposed/#tx=5c0383645b1df5d841323406b2d58651a7d41fd52530c85f20b5ad981072001f)
 
@@ -19,7 +19,7 @@ Here is the example we will be looking at:
 
 This transaction has 2 inputs and 4 outputs, with 2 outputs being exactly equal (900,000 sats each). Let us look at the [Boltzmann entropy](../glossary.md#boltzmann-entropy) analysis:
 
-![Stonewall analysis - link probability matrix](../images/stonewall-analysis.png){ loading=lazy }
+![Stonewall analysis - link probability matrix](../images/stonewall-analysis.png)
 
 ### Key Findings
 

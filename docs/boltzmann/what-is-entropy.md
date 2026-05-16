@@ -49,7 +49,7 @@ An interpretation is a **mathematically valid way to group inputs and outputs** 
 
 Consider a straightforward transaction:
 
-![A simple 1-input, 2-output transaction](../images/one-in-two-out.png){ loading=lazy }
+![A simple 1-input, 2-output transaction](../images/one-in-two-out.png)
 
 **Transaction ID:** [`639fc4b0...`](https://am-i.exposed/#tx=639fc4b0cace9370ed9e113b6e80a5765a27ebe601dd03ef350ada5b01bd2846)
 
@@ -83,7 +83,7 @@ Roughly **85% of all Bitcoin transactions** look like this. An observer can dete
 
 Now consider a slightly more complex transaction:
 
-![A 2-input, 2-output transaction](../images/two-in-two-out.png){ loading=lazy }
+![A 2-input, 2-output transaction](../images/two-in-two-out.png)
 
 **Transaction ID:** [`ce3d95a2...`](https://am-i.exposed/#tx=ce3d95a2ec0237898ed0e5961699408e67b19fc2fcce7dfdbf439cbc3b797921)
 
@@ -121,7 +121,7 @@ One bit means the observer faces a 50/50 guess. Not much privacy, but more than 
 
 Now look at a 5-party Whirlpool CoinJoin:
 
-![Whirlpool CoinJoin transaction](../images/whirlpool.png){ loading=lazy }
+![Whirlpool CoinJoin transaction](../images/whirlpool.png)
 
 - **5 inputs** of ~5,000,000 sats each (some inlude extra for miner fee)
 - **5 outputs** of 5,000,000 sats each
