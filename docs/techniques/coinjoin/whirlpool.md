@@ -485,7 +485,7 @@ Ashigaru continues to be actively maintained by an anonymous team committed to B
 
 ## Ashigaru Whirlpool Stats
 
-The widget below shows current Ashigaru Whirlpool pool activity from [whirlpoolstats.xyz](https://www.whirlpoolstats.xyz/).
+The widget below shows current Ashigaru Whirlpool pool activity from [Whirlpool.Observer](https://whirlpool.observer/), including live poolsize, unspent postmix, unmixed premix, UTXO counts, cycle counts, TX0 counts, and compact history charts.
 
 <div data-whirlpool-stats-widget data-whirlpool-compact="true"></div>
 
