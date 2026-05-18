@@ -101,9 +101,11 @@ extra_javascript:
   - js/popup.js
   - javascripts/mathjax.js
   - javascripts/whirlpool-stats.js
+  - javascripts/lightning-decoder.js
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 extra_css:
   - stylesheets/whirlpool-stats.css
+  - stylesheets/lightning-decoder.css
 extra:
   generator: false
 nav:
@@ -168,6 +170,8 @@ nav:
     - Privacy Podcasts: resources/podcasts.md
     - Miscellaneous:
       - Ashigaru Whirlpool Stats: resources/whirlpool-stats.md
+      - Lightning Decoder: resources/lightning-decoder.md
+      - lnproxy Invoice Decoder: resources/lnproxy-invoice-decoder.md
       - Bitcoin Fungibility: resources/fungibility.md
       - Self-Hosting am-i.exposed: resources/selfhosting-am-i-exposed.md
   - Glossary:

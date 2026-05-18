@@ -14,6 +14,8 @@ A curated list of Bitcoin privacy tools and educational resources.
 | [mempool.space](https://mempool.space) | Bitcoin block explorer and mempool visualizer |
 | [am-i.exposed](https://am-i.exposed) | Bitcoin privacy scanner |
 | [Self-hosting am-i.exposed](selfhosting-am-i-exposed.md) | Run am-i.exposed with your own mempool backend on Umbrel, StartOS, or Docker |
+| [Lightning Decoder](lightning-decoder.md) | Decode one BOLT11 invoice, LNURL, or Lightning Address in your browser |
+| [lnproxy Invoice Decoder](lnproxy-invoice-decoder.md) | Wrap an invoice with lnproxy and verify the returned payment hash in your browser |
 | [paymentcode.io](https://paymentcode.io) | BIP47 & PayNyms Hub |
 | [ashigaru.rs](https://ashigaru.rs) | Bitcoin privacy wallet and whirlpool coinjoin |
 | [dojo-osp.org](https://dojo-osp.org) | Samourai Dojo open-source project |

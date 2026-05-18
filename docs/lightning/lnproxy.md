@@ -74,6 +74,12 @@ Using lnproxy is straightforward:
    - The amount is the original amount plus a small relay fee
 5. **Pay the proxy invoice** using your Lightning wallet
 
+!!! tip "Try the demo tool"
+
+    The [lnproxy Invoice Decoder](../resources/lnproxy-invoice-decoder.md#lnproxy-demo-tool) resource page includes a browser-side demo tool. It can request a wrapped invoice from a clearnet relay, show the original and wrapped invoices with highlighted fields, and verify whether the payment hashes match.
+
+    Treat it as a learning and verification demo. For sensitive invoices, prefer the official [lnproxy.org](https://lnproxy.org/) interface or a local copy of the open-source lnproxy web UI.
+
 ---
 
 ## Trust Model
