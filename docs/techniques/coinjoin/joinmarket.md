@@ -27,19 +27,18 @@ This creates a free market for CoinJoin liquidity, where anyone can earn bitcoin
 
 !!! tip "The Key Difference: No Coordinator"
 
-    Unlike Whirlpool or Wasabi, JoinMarket has **no central coordinator at all**. The taker selects peers from the public [orderbook](https://joinmarket-ng.sgn.space/) and communicates with them directly over end-to-end encrypted channels, routed through replaceable directory servers (and over Tor). This is not just about censorship resistance, it eliminates an entire class of attacks that a coordinator could perform.
+    Unlike Whirlpool or Wasabi, JoinMarket has **no central coordinator at all**. The taker selects peers from the public [orderbook](https://joinmarket-ng.sgn.space/) and communicates with them directly over end-to-end encrypted channels, routed through replaceable directory servers (and over Tor). This allows for increased censorship resistance and eliminates a class of attacks that a coordinator could perform.
 
 ---
 
 ## Why No Coordinator Matters
 
-The absence of a central coordinator is JoinMarket's most important structural property, and it is often understated. A coordinator in other implementations (Wasabi, Whirlpool) sees more than just whether a round happens, and any compromised or malicious coordinator can:
+The absence of a central coordinator is JoinMarket's most important structural property, and it is often understated. A coordinator in other implementations (Wasabi, Whirlpool) sees more than just whether a round happens, and any compromised or malicious coordinator might be able to:
 
-- **Sybil the round**: fill a CoinJoin with itself and one real user, so the "anonymity set" claimed on chain (say, 20+ outputs) is actually 1 vs. the coordinator. This attack is invisible from the outside.
-- **Link inputs to outputs**: depending on the protocol, the coordinator may see the mapping directly, or may correlate it via timing, IPs, or out-of-band signals.
-- **Censor users**: blacklist UTXOs, IPs, or jurisdictions. This has happened in practice.
+- **Sybil the round**: fill a CoinJoin with itself and one real user, so the "anonymity set" claimed on chain (say, 20+ outputs) is actually 1 vs. the coordinator. This attack is invisible from the outside. This is very difficult with whirlpool however each mix cycle requires a minimum of 2 fresh, fee-paying inputs, making large-scale sybil attacks expensive to run for a prolonged period. This fresh liquidity requirement for each cycle can be verified in the [Whirlpool.Observer Whirlpool cycles table](https://whirlpool.observer/). So the fresh liquidity requirement and free, unlimited remixes is how Whirlpool ensures you can mitigate the consequences of any sybil attack.
+- **Link inputs to outputs**: depending on the protocol, the coordinator, if not properly blinded, may see the mapping directly, or may correlate it via timing or IPs.
+- **Censor users**: blacklist UTXOs, IPs, or jurisdictions. This has happened in practice with Wasabi.
 - **Be coerced**: a single legal target is far easier to subpoena, shut down, or force into surveillance than a swarm of peers.
-- **Steal fees or stall the network**: a coordinator can extract rents or simply disappear, taking the network with it.
 
 In JoinMarket, the taker is its own coordinator and never reveals its full input/output set to any single counterparty. Makers see only their inputs and outputs of the specific CoinJoin they participate in, communicate end-to-end encrypted with the taker, and directory servers route messages but cannot read them. There is no privileged party to compromise.
 
@@ -81,22 +80,31 @@ The image below shows a JoinMarket CoinJoin transaction as analyzed by [am-i.exp
 
 ---
 
-## Variable Amounts Are a Feature, Not a Bug
+## JoinMarket's Variable Amounts vs fixed denominations
 
-A common misconception is that fixed denominations (as in Whirlpool) are strictly better for privacy. In reality, **real payments are variable in amount**, and a fixed-denomination system has its own costs:
+A common debate in CoinJoin design is whether variable amounts or fixed denominations provide better privacy. The honest answer is that they solve different problems and create different trade-offs.
 
-- It forces users to split their balance into pool-sized chunks, often creating [doxxic change](../../glossary.md#doxxic-change) at the entry of the pool.
-- The eventual payment from mixed coins almost never matches the pool denomination, so the user must re-merge or generate change at the exit, which is the most fragile moment.
+Fixed-denomination systems like Whirlpool have an important privacy advantage: equal-value outputs can continue to build [forward-looking anonymity sets](whirlpool.md#forward-looking-anonymity-sets) over time. If post-mix UTXOs stay in the same denomination and remix, they remain part of a recognizable pool of equal outputs. This can also help with backward-looking analysis, because observers cannot confidently determine which premix input became which postmix output inside a round.
 
-JoinMarket allows the taker to pick the CoinJoin amount freely. This means a real payment of, say, 1.83746 BTC can be mixed and paid directly to the destination in a single CoinJoin. The equal-output set still provides ambiguity (see [Privacy Analysis](#privacy-analysis-what-can-and-cannot-be-deanonymized)).
+However, fixed denominations also come with practical costs:
 
-For payments, variable amounts are not just a convenience, they are the natural shape of economic activity.
+- Users must split their balance into pool-sized chunks before mixing (Whirlpool Tx0 Transaction)
+- The Tx0 process can create doxxic change that must be handled separately.
+- Spending later may require change, multiple UTXOs, or careful post-mix handling.
+
+JoinMarket takes a different approach. The taker chooses the CoinJoin amount freely. This can be useful when the user wants to mix an amount close to a real payment amount, rather than first converting funds into fixed pool denominations.
+
+For example, if someone needs to make a payment of 1.83746 BTC, JoinMarket can allow the taker to choose a CoinJoin amount around that payment size. The equal-output set still provides ambiguity, while avoiding some of the denomination-management problems that fixed-pool systems create.
+
+The trade-off is that variable-amount CoinJoins do not create the same kind of persistent, reusable denomination pool that Whirlpool does. A fixed-denomination model allows equal outputs to remix and grow a [forward-looking anonymity set](whirlpool.md#forward-looking-anonymity-sets). A variable-amount model can be more flexible for specific payment sizes, but the user must still pay close attention to amount matching, change outputs, timing, and post-mix spending.
+
+In short: variable amounts are useful for payment flexibility, while fixed denominations are useful for building durable equal-output anonymity sets. Neither model is automatically superior in every situation. The privacy result depends on how the tool is used and how carefully the user spends afterward.
 
 ---
 
 ## Mixdepths: Pre-Mix / Post-Mix Separation Done Right
 
-JoinMarket has had a robust pre-mix / post-mix separation **since its earliest versions** in the form of **mixdepths**. This is a frequently misunderstood point: JoinMarket is not "one big wallet with no separation", it is five (by default) isolated sub-accounts arranged as a privacy pipeline.
+JoinMarket has had a robust pre-mix / post-mix separation **since its earliest versions** in the form of **mixdepths**. JoinMarket is five (by default) isolated sub-accounts arranged as a privacy pipeline.
 
 **Design (default: 5 isolated mixdepths):**
 
@@ -286,12 +294,13 @@ The orderbook shows offers, fidelity bond values, supported protocol features, a
 | **Coordinator** | None (true P2P) | Centralized | Centralized |
 | **Denominations** | Variable (taker chooses) | Fixed pools | Variable (WabiSabi) |
 | **Fees** | Taker pays makers (market) | Pay coordinator | Pay coordinator |
-| **Sybil resistance** | PoDLE + fidelity bonds | Trust coordinator | Trust coordinator |
+| **Sybil resistance** | PoDLE + fidelity bonds | Fresh premixers (and [free remixes](whirlpool.md#forward-looking-anonymity-sets)) make prolonged Sybil attacks infeasible | Trust coordinator |
 | **Pre/Post-mix separation** | Enforced by mixdepths (5 by default) | Enforced by accounts | Enforced by accounts |
-| **Change privacy** | Improves with mixdepth | "Bad bank" / doxxic | Depends on round |
+| **Change privacy** | Improves with mixdepth | "Bad bank" / doxxic | Depends on round and often ground down to near dust due to Change subdivision |
 | **Censorship resistance** | High | Low | Low |
-| **Anonymity set per round** | Configurable (typ. 9-11) | 5 | Variable |
-| **Status** | Actively developed (JoinMarket NG) | Stopped (Samourai shut down) | Active |
+| **Anonymity set per round** | Configurable (typ. 9-11) | 5-8 | Variable |
+| **Forward-looking anonymity set** | None (due to variable amounts) | [Exponential](whirlpool.md#forward-looking-anonymity-sets) | Exponential |
+| **Status** | Actively developed (JoinMarket NG) | Actively Developed by Ashigaru | Active |
 
 ---
 
